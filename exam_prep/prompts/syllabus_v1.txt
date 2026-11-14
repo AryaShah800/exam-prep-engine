@@ -1,0 +1,15 @@
+Turn this university course syllabus into a topic list for tagging past exam questions.
+
+Rules:
+- Keep the syllabus's own unit numbering and unit titles.
+- Under each unit, list 3 to 10 topics. A topic is something an exam question can be about (for example "Banker's algorithm", not "Introduction").
+- Use the syllabus's wording for topic names. Do not add topics the syllabus does not mention.
+- keywords: 2 to 6 words or short phrases a question on that topic is likely to contain, including common abbreviations (for example "RAG", "SJF", "2PL").
+- subject_name: the full course name.
+
+Subject code: $subject
+
+Syllabus:
+<<<
+$syllabus_text
+>>>

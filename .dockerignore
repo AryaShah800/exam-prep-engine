@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!requirements.txt
+!requirements-web.txt
+!requirements-agent.txt
+!exam_prep/
+!exam_prep/**
+**/__pycache__/
+**/*.pyc

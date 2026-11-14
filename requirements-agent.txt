@@ -1,0 +1,5 @@
+# Optional LangGraph router (exam_prep/agent.py, POST /agent). Kept apart from requirements-eval.txt: RAGAS 0.4.3
+# pins LangChain 0.3 (langchain-core < 1), while current LangGraph needs langchain-core >= 1. Use a separate venv
+# from the evaluation one. Without this file installed, /agent returns 503 and every other route still works.
+-r requirements-web.txt
+langgraph>=1.0

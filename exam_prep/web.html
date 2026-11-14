@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exam-Prep Engine</title>
+<style>body{font:17px system-ui;background:#f4f6fa;color:#182737;max-width:850px;margin:3rem auto;padding:0 1rem}h1{letter-spacing:-1px}form,article{background:white;padding:1.4rem;border-radius:12px;margin:1rem 0}label{display:block;margin:.7rem 0}input,select,button,textarea{font:inherit;padding:.6rem;border:1px solid #bbc6d1;border-radius:6px}input[type=text],textarea{width:95%}button{background:#164b70;color:white;cursor:pointer;margin:.5rem .5rem 0 0}button:disabled{opacity:.5}#status,#pstatus{min-height:1.5rem}pre{white-space:pre-wrap;font:inherit}small{color:#536577}.notice{background:#fff6dc;border-left:4px solid #c99a00;padding:.6rem .8rem;border-radius:6px}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #dde3ea;padding:.35rem;text-align:left}</style></head>
+<body><h1>Exam-Prep Engine</h1><p>Find past questions and explore their sources.</p>
+<form id="search"><label for="query">Question or topic</label><input id="query" type="text" required maxlength="1000" placeholder="Questions about transformers">
+<label for="subject">Subject</label><select id="subject"><option value="">All subjects</option><option>AI</option><option>DC</option><option>MLDL</option><option>WT</option></select>
+<label for="source">Papers</label><select id="source"><option value="">All universities</option><option value="DDU">DDU only</option><option value="external">Other universities (practice)</option></select>
+<label for="mode">Search method</label><select id="mode"><option value="bm25">Keyword · offline</option><option value="hybrid">Hybrid · local embeddings</option><option value="dense">Semantic · local embeddings</option></select>
+<p><small>Keyword search runs locally. Cited answers use the configured Gemini service and send your query and retrieved question text to it. Sources contain past questions, not official solutions.</small></p>
+<button type="submit">Search papers</button><button type="button" id="ask">Get cited answer</button></form>
+<p id="status" role="status" aria-live="polite"></p><section id="results"></section>
+
+<h2>Practice</h2>
+<form id="practice"><label for="ptopic">Topic</label><input id="ptopic" type="text" required maxlength="300" placeholder="Deadlock avoidance">
+<label for="psubject">Subject</label><select id="psubject" required><option value="">Choose a subject</option><option>AI</option><option>DC</option><option>MLDL</option><option>WT</option></select>
+<label for="pmarks">Marks (optional)</label><input id="pmarks" type="number" min="1" max="100" step="0.5">
+<p class="notice">AI only: practice questions and rubrics are written by a language model from cited past questions (checked in code for IDs and marks only). Grades are AI feedback, not validated against human graders and not an exam mark. Topic history is a count of past DDU questions, not a prediction.</p>
+<button type="submit">Generate practice question</button><button type="button" id="history">Topic history (DDU)</button></form>
+<p id="pstatus" role="status" aria-live="polite"></p><section id="presults"></section>
+<form id="grade" hidden><label for="panswer">Your answer</label><textarea id="panswer" rows="8" required maxlength="8000"></textarea>
+<button type="submit">Grade my answer (AI)</button></form><section id="gresults"></section>
+<script>
+const $=s=>document.querySelector(s),form=$('#search'),results=$('#results'),status=$('#status');let practice=null,variant=0;
+function el(tag,text,cls){const e=document.createElement(tag);if(text!=null)e.textContent=text;if(cls)e.className=cls;return e;}
+function errorText(data){const d=data&&data.detail;if(typeof d==='string')return d;if(Array.isArray(d)&&d.length&&d[0].msg)return String(d[0].msg).replace(/^Value error, /,'');return 'Request failed. Please try again.';}
+async function post(endpoint,body){const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(errorText(data));return data;}
+async function busy(out,fn){const buttons=[...document.querySelectorAll('button')];buttons.forEach(b=>b.disabled=true);out.textContent='Working…';try{await fn();}catch(error){out.textContent=error.message||'Request failed.';}finally{buttons.forEach(b=>b.disabled=false);}}
+function hitCard(hit){const a=el('article');a.append(el('h3',hit.citation),el('p',hit.text),el('small',`${hit.subject} · ${hit.source} · ${hit.year} · ${hit.marks==null?'marks not printed':hit.marks+' marks'}`));return a;}
+async function run(endpoint){if(!form.reportValidity())return;results.replaceChildren();await busy(status,async()=>{
+const data=await post(endpoint,{query:$('#query').value,subject:$('#subject').value||null,source:$('#source').value||null,mode:$('#mode').value});
+if(data.answer){const a=el('article');a.append(el('h2',data.grounded?'Cited answer':'Answer unavailable'),el('pre',data.answer));results.append(a);}
+data.hits.forEach(h=>results.append(hitCard(h)));status.textContent=`${data.hits.length} past questions found.`;});}
+form.addEventListener('submit',e=>{e.preventDefault();run('/search');});$('#ask').addEventListener('click',()=>run('/ask'));
+const pform=$('#practice'),pout=$('#presults'),pstatus=$('#pstatus'),gform=$('#grade'),gout=$('#gresults');
+pform.addEventListener('submit',e=>{e.preventDefault();if(!pform.reportValidity())return;pout.replaceChildren();gout.replaceChildren();gform.hidden=true;practice=null;busy(pstatus,async()=>{
+const marks=$('#pmarks').value;const p=await post('/practice',{topic:$('#ptopic').value,subject:$('#psubject').value,marks:marks?Number(marks):null,variant:variant++});
+const a=el('article'),ul=el('ul');a.append(el('h3',`Practice question (AI-generated) · ${p.marks} marks`),el('pre',p.question),el('p',p.notice,'notice'),el('h4','Rubric'));
+p.rubric.forEach(r=>ul.append(el('li',`${r.criterion} (${r.marks})`)));a.append(ul,el('small','Based on: '+p.references.map(h=>h.citation).join(', ')));pout.append(a);
+practice=p;$("#panswer").value="";gform.hidden=false;pstatus.textContent='Write your answer below, then ask for AI feedback.';});});
+$('#history').addEventListener('click',()=>{const subject=$('#psubject').value;if(!subject){pstatus.textContent='Choose a subject first.';return;}pout.replaceChildren();practice=null;gform.hidden=true;gout.replaceChildren();busy(pstatus,async()=>{
+const r=await post('/predict',{subject});const a=el('article'),t=el('table'),head=el('tr');['Topic','Papers','Questions','Marks'].forEach(h=>head.append(el('th',h)));t.append(head);
+r.topics.forEach(x=>{const tr=el('tr');[`${x.topic_id} ${x.name}`,`${x.papers}/${r.ddu_papers}`,x.questions,x.marks_printed].forEach(v=>tr.append(el('td',String(v))));t.append(tr);});
+a.append(el('h3',`${r.subject}: topic history from ${r.ddu_papers} DDU papers (${r.years.join(', ')})`),el('p',r.notice,'notice'),t);pout.append(a);pstatus.textContent='';});});
+gform.addEventListener('submit',e=>{e.preventDefault();if(!practice||!gform.reportValidity())return;gout.replaceChildren();busy(pstatus,async()=>{
+const g=await post('/grade',{question:practice.question,rubric:practice.rubric,answer:$('#panswer').value});const a=el('article'),ul=el('ul');
+a.append(el('h3',`AI feedback: ${g.total} / ${g.max_total}`),el('p',g.notice,'notice'));g.points.forEach(p=>ul.append(el('li',`${p.criterion}: ${p.score}/${p.max_marks}. ${p.feedback}`)));
+a.append(ul,el('p',g.overall_feedback));gout.append(a);pstatus.textContent='';});});
+</script></body></html>

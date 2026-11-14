@@ -1,0 +1,10 @@
+# Phase C answer evaluation (RAGAS faithfulness) and experiment tracking.
+# Kept apart from requirements.txt: ragas 0.4.3 imports langchain_community.chat_models.vertexai, which only the
+# LangChain 0.3 line has, while LangGraph (Phase E) needs langchain-core >= 1. Use a separate venv if both are needed.
+-r requirements.txt
+ragas==0.4.3
+langchain<1
+langchain-core<1
+langchain-community<0.4
+langchain-openai<1
+mlflow>=3.0

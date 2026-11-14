@@ -1,0 +1,564 @@
+{
+  "subject": "WT",
+  "subject_name": "WEB TECHNOLOGY",
+  "topics": [
+    {
+      "topic_id": "WT-U1-T1",
+      "unit_no": 1,
+      "unit_title": "INTRODUCTION .NET PLATFORM",
+      "name": "Features of .NET Platform",
+      "keywords": [
+        ".NET platform",
+        "CLR",
+        "managed code",
+        "CTS"
+      ]
+    },
+    {
+      "topic_id": "WT-U1-T2",
+      "unit_no": 1,
+      "unit_title": "INTRODUCTION .NET PLATFORM",
+      "name": "Components of the .NET Platform",
+      "keywords": [
+        "FCL",
+        "MSIL",
+        "JIT",
+        "Assemblies"
+      ]
+    },
+    {
+      "topic_id": "WT-U1-T3",
+      "unit_no": 1,
+      "unit_title": "INTRODUCTION .NET PLATFORM",
+      "name": "Developing applications using C#.NET",
+      "keywords": [
+        "C# application",
+        "Visual Studio",
+        ".NET SDK"
+      ]
+    },
+    {
+      "topic_id": "WT-U2-T1",
+      "unit_no": 2,
+      "unit_title": "INTRODUCTION C#.NET",
+      "name": "Partial class and Collections",
+      "keywords": [
+        "partial class",
+        "System.Collections",
+        "List",
+        "Arrays"
+      ]
+    },
+    {
+      "topic_id": "WT-U2-T2",
+      "unit_no": 2,
+      "unit_title": "INTRODUCTION C#.NET",
+      "name": "Events and Delegates",
+      "keywords": [
+        "delegate",
+        "event handler",
+        "multicast delegate"
+      ]
+    },
+    {
+      "topic_id": "WT-U2-T3",
+      "unit_no": 2,
+      "unit_title": "INTRODUCTION C#.NET",
+      "name": "Threading and Exception handling",
+      "keywords": [
+        "Thread",
+        "try catch",
+        "Exception",
+        "multithreading"
+      ]
+    },
+    {
+      "topic_id": "WT-U2-T4",
+      "unit_no": 2,
+      "unit_title": "INTRODUCTION C#.NET",
+      "name": "File I/O and Networking",
+      "keywords": [
+        "FileStream",
+        "StreamReader",
+        "Socket",
+        "System.Net"
+      ]
+    },
+    {
+      "topic_id": "WT-U2-T5",
+      "unit_no": 2,
+      "unit_title": "INTRODUCTION C#.NET",
+      "name": "Generics in C#",
+      "keywords": [
+        "Generic list",
+        "List<T>",
+        "type parameters"
+      ]
+    },
+    {
+      "topic_id": "WT-U3-T1",
+      "unit_no": 3,
+      "unit_title": "ASP.NET SERVER CONTROLS",
+      "name": "Server-side processing and HTML controls",
+      "keywords": [
+        "server-side",
+        "runat server",
+        "HTML controls"
+      ]
+    },
+    {
+      "topic_id": "WT-U3-T2",
+      "unit_no": 3,
+      "unit_title": "ASP.NET SERVER CONTROLS",
+      "name": "ASP.NET Standard controls",
+      "keywords": [
+        "BulletedList",
+        "MultiView",
+        "View",
+        "FileUpload",
+        "Wizard",
+        "ImageMap",
+        "Calendar",
+        "HiddenField",
+        "ColorPicker"
+      ]
+    },
+    {
+      "topic_id": "WT-U3-T3",
+      "unit_no": 3,
+      "unit_title": "ASP.NET SERVER CONTROLS",
+      "name": "ASP.NET Login controls",
+      "keywords": [
+        "Login control",
+        "PasswordRecovery",
+        "CreateUserWizard"
+      ]
+    },
+    {
+      "topic_id": "WT-U3-T4",
+      "unit_no": 3,
+      "unit_title": "ASP.NET SERVER CONTROLS",
+      "name": "ASP.NET Validation controls",
+      "keywords": [
+        "RequiredFieldValidator",
+        "CompareValidator",
+        "RangeValidator",
+        "CustomValidator"
+      ]
+    },
+    {
+      "topic_id": "WT-U3-T5",
+      "unit_no": 3,
+      "unit_title": "ASP.NET SERVER CONTROLS",
+      "name": "ASP.NET page life cycle and master pages",
+      "keywords": [
+        "page life cycle",
+        "Page_Load",
+        "Page_Init",
+        "PreRender",
+        "master page",
+        "nested master page",
+        "content page",
+        "ContentPlaceHolder",
+        "themes",
+        "skins"
+      ]
+    },
+    {
+      "topic_id": "WT-U3-T6",
+      "unit_no": 3,
+      "unit_title": "ASP.NET SERVER CONTROLS",
+      "name": "State management (ViewState, Session, Cookies, Application, QueryString)",
+      "keywords": [
+        "ViewState",
+        "Session",
+        "cookies",
+        "Application state",
+        "QueryString",
+        "HiddenField",
+        "Server.Transfer",
+        "Response.Redirect",
+        "Global.asax"
+      ]
+    },
+    {
+      "topic_id": "WT-U4-T1",
+      "unit_no": 4,
+      "unit_title": "DATA MANAGEMENT WITH ADO.NET",
+      "name": "Basic ADO.NET features and Connection objects",
+      "keywords": [
+        "ADO.NET",
+        "SqlConnection",
+        "SqlCommand",
+        "DataReader"
+      ]
+    },
+    {
+      "topic_id": "WT-U4-T2",
+      "unit_no": 4,
+      "unit_title": "DATA MANAGEMENT WITH ADO.NET",
+      "name": "DataAdapter, DataSet and DataTable",
+      "keywords": [
+        "SqlDataAdapter",
+        "DataSet",
+        "DataTable",
+        "disconnected architecture"
+      ]
+    },
+    {
+      "topic_id": "WT-U4-T3",
+      "unit_no": 4,
+      "unit_title": "DATA MANAGEMENT WITH ADO.NET",
+      "name": "Data display and Web control integration",
+      "keywords": [
+        "data binding",
+        "SQL statements",
+        "DataBound controls"
+      ]
+    },
+    {
+      "topic_id": "WT-U4-T4",
+      "unit_no": 4,
+      "unit_title": "DATA MANAGEMENT WITH ADO.NET",
+      "name": "Manipulating data within ADO.NET",
+      "keywords": [
+        "ExecuteNonQuery",
+        "ExecuteScalar",
+        "SQL CRUD"
+      ]
+    },
+    {
+      "topic_id": "WT-U5-T1",
+      "unit_no": 5,
+      "unit_title": "DATA BINDING IN ASP.NET USING DATA SOURCE CONTROLS",
+      "name": "GridView and DetailsView controls",
+      "keywords": [
+        "GridView",
+        "DetailsView",
+        "SqlDataSource",
+        "paging"
+      ]
+    },
+    {
+      "topic_id": "WT-U5-T2",
+      "unit_no": 5,
+      "unit_title": "DATA BINDING IN ASP.NET USING DATA SOURCE CONTROLS",
+      "name": "FormView and DataList controls",
+      "keywords": [
+        "FormView",
+        "DataList",
+        "ItemTemplate"
+      ]
+    },
+    {
+      "topic_id": "WT-U5-T3",
+      "unit_no": 5,
+      "unit_title": "DATA BINDING IN ASP.NET USING DATA SOURCE CONTROLS",
+      "name": "Navigation controls and DropDownList",
+      "keywords": [
+        "DropDownList",
+        "TreeView",
+        "Menu",
+        "SiteMap"
+      ]
+    },
+    {
+      "topic_id": "WT-U5-T4",
+      "unit_no": 5,
+      "unit_title": "DATA BINDING IN ASP.NET USING DATA SOURCE CONTROLS",
+      "name": "AdRotator control",
+      "keywords": [
+        "AdRotator",
+        "AdvertisementFile",
+        "XML banner"
+      ]
+    },
+    {
+      "topic_id": "WT-U6-T1",
+      "unit_no": 6,
+      "unit_title": "MVC ARCHITECTURE PATTERN",
+      "name": "Concept of MVC Architecture",
+      "keywords": [
+        "MVC",
+        "Model View Controller",
+        "3-tier"
+      ]
+    },
+    {
+      "topic_id": "WT-U6-T2",
+      "unit_no": 6,
+      "unit_title": "MVC ARCHITECTURE PATTERN",
+      "name": "Three Levels of Architecture",
+      "keywords": [
+        "presentation layer",
+        "business logic",
+        "data layer"
+      ]
+    },
+    {
+      "topic_id": "WT-U6-T3",
+      "unit_no": 6,
+      "unit_title": "MVC ARCHITECTURE PATTERN",
+      "name": "Benefits of Using MVC Framework",
+      "keywords": [
+        "separation of concerns",
+        "testability",
+        "reusability"
+      ]
+    },
+    {
+      "topic_id": "WT-U7-T1",
+      "unit_no": 7,
+      "unit_title": "ASP.NET MVC FUNDAMENTALS",
+      "name": "Controllers and ActionResults",
+      "keywords": [
+        "Controller",
+        "ActionResult",
+        "ViewResult",
+        "JsonResult"
+      ]
+    },
+    {
+      "topic_id": "WT-U7-T2",
+      "unit_no": 7,
+      "unit_title": "ASP.NET MVC FUNDAMENTALS",
+      "name": "Routing Class File and parameters",
+      "keywords": [
+        "RouteConfig",
+        "MapRoute",
+        "routing parameters"
+      ]
+    },
+    {
+      "topic_id": "WT-U7-T3",
+      "unit_no": 7,
+      "unit_title": "ASP.NET MVC FUNDAMENTALS",
+      "name": "Passing Data to Views using ViewBag and ViewData",
+      "keywords": [
+        "ViewBag",
+        "ViewData",
+        "TempData",
+        "dynamic properties"
+      ]
+    },
+    {
+      "topic_id": "WT-U7-T4",
+      "unit_no": 7,
+      "unit_title": "ASP.NET MVC FUNDAMENTALS",
+      "name": "Models and Model Binding",
+      "keywords": [
+        "Model binding",
+        "FormCollection",
+        "ViewModel"
+      ]
+    },
+    {
+      "topic_id": "WT-U8-T1",
+      "unit_no": 8,
+      "unit_title": "ENTITY FRAMEWORK WITH LINQ",
+      "name": "Database First vs Code First Model",
+      "keywords": [
+        "EF",
+        "Database First",
+        "Code First",
+        "migrations"
+      ]
+    },
+    {
+      "topic_id": "WT-U8-T2",
+      "unit_no": 8,
+      "unit_title": "ENTITY FRAMEWORK WITH LINQ",
+      "name": "DbContext Class and DbSet Entities",
+      "keywords": [
+        "DbContext",
+        "DbSet",
+        "entity mapping"
+      ]
+    },
+    {
+      "topic_id": "WT-U8-T3",
+      "unit_no": 8,
+      "unit_title": "ENTITY FRAMEWORK WITH LINQ",
+      "name": "CRUD operations with Entity Framework",
+      "keywords": [
+        "Add",
+        "EF Core",
+        "Entity Framework Core",
+        "ORM",
+        "Remove",
+        "SaveChanges",
+        "Update"
+      ]
+    },
+    {
+      "topic_id": "WT-U8-T4",
+      "unit_no": 8,
+      "unit_title": "ENTITY FRAMEWORK WITH LINQ",
+      "name": "Querying with LINQ-to-Entities",
+      "keywords": [
+        "LINQ",
+        "Lazy loading",
+        "Eager loading",
+        "Explicit loading"
+      ]
+    },
+    {
+      "topic_id": "WT-U9-T1",
+      "unit_no": 9,
+      "unit_title": "ASP.NET RAZOR VIEW AND HTML HELPER CLASS",
+      "name": "Razor View Engine and Expressions",
+      "keywords": [
+        "Razor",
+        "Razor view",
+        "@expression",
+        "code block"
+      ]
+    },
+    {
+      "topic_id": "WT-U9-T2",
+      "unit_no": 9,
+      "unit_title": "ASP.NET RAZOR VIEW AND HTML HELPER CLASS",
+      "name": "Razor Control Structures",
+      "keywords": [
+        "@if",
+        "@switch",
+        "@for",
+        "@foreach"
+      ]
+    },
+    {
+      "topic_id": "WT-U9-T3",
+      "unit_no": 9,
+      "unit_title": "ASP.NET RAZOR VIEW AND HTML HELPER CLASS",
+      "name": "HTML Helpers for Form Controls",
+      "keywords": [
+        "LabelFor",
+        "TextBoxFor",
+        "DropDownListFor",
+        "CheckBoxFor"
+      ]
+    },
+    {
+      "topic_id": "WT-U9-T4",
+      "unit_no": 9,
+      "unit_title": "ASP.NET RAZOR VIEW AND HTML HELPER CLASS",
+      "name": "Display annotations and compounding statements",
+      "keywords": [
+        "Display annotation",
+        "[DisplayName]",
+        "@using"
+      ]
+    },
+    {
+      "topic_id": "WT-U10-T1",
+      "unit_no": 10,
+      "unit_title": "PARTIAL VIEW LAYOUT VIEW AND VALIDATION",
+      "name": "Partial View and Layout View",
+      "keywords": [
+        "_Layout.cshtml",
+        "PartialView",
+        "RenderBody",
+        "RenderSection"
+      ]
+    },
+    {
+      "topic_id": "WT-U10-T2",
+      "unit_no": 10,
+      "unit_title": "PARTIAL VIEW LAYOUT VIEW AND VALIDATION",
+      "name": "Working with Shared Views and Data",
+      "keywords": [
+        "Shared Views",
+        "ViewData",
+        "dynamic data passing"
+      ]
+    },
+    {
+      "topic_id": "WT-U10-T3",
+      "unit_no": 10,
+      "unit_title": "PARTIAL VIEW LAYOUT VIEW AND VALIDATION",
+      "name": "Validation in ASP.NET MVC",
+      "keywords": [
+        "DataAnnotations",
+        "Required",
+        "StringLength",
+        "ModelState"
+      ]
+    },
+    {
+      "topic_id": "WT-U11-T1",
+      "unit_no": 11,
+      "unit_title": "ADVANCED TOPICS IN WEB DEVELOPMENT IN ASP.NET",
+      "name": "Web services using ASP.NET",
+      "keywords": [
+        "Web service",
+        "asmx",
+        "WCF",
+        "REST"
+      ]
+    },
+    {
+      "topic_id": "WT-U11-T2",
+      "unit_no": 11,
+      "unit_title": "ADVANCED TOPICS IN WEB DEVELOPMENT IN ASP.NET",
+      "name": "User controls in ASP.NET",
+      "keywords": [
+        "UserControl",
+        "ascx",
+        "custom control"
+      ]
+    },
+    {
+      "topic_id": "WT-U11-T3",
+      "unit_no": 11,
+      "unit_title": "ADVANCED TOPICS IN WEB DEVELOPMENT IN ASP.NET",
+      "name": "Caching in ASP.NET and MVC",
+      "keywords": [
+        "OutputCache",
+        "caching",
+        "FileDependency",
+        "Output caching"
+      ]
+    },
+    {
+      "topic_id": "WT-U11-T4",
+      "unit_no": 11,
+      "unit_title": "ADVANCED TOPICS IN WEB DEVELOPMENT IN ASP.NET",
+      "name": "Introduction to Dynamics 365",
+      "keywords": [
+        "Dynamics 365",
+        "CRM",
+        "ERP"
+      ]
+    },
+    {
+      "topic_id": "WT-U11-T5",
+      "unit_no": 11,
+      "unit_title": "ADVANCED TOPICS IN WEB DEVELOPMENT IN ASP.NET",
+      "name": "Deployment of MVC application",
+      "keywords": [
+        "IIS deployment",
+        "publish MVC",
+        "web hosting"
+      ]
+    },
+    {
+      "topic_id": "WT-U11-T6",
+      "unit_no": 11,
+      "unit_title": "ADVANCED TOPICS IN WEB DEVELOPMENT IN ASP.NET",
+      "name": "ASP.NET Core: hosting, middleware pipeline and dependency injection",
+      "keywords": [
+        "ASP.NET Core",
+        ".NET Core",
+        "Kestrel",
+        "hosting options",
+        "middleware",
+        "short circuiting",
+        "request pipeline",
+        "dependency injection",
+        "Program.cs",
+        "services",
+        "session state"
+      ]
+    }
+  ]
+}

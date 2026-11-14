@@ -1,0 +1,14 @@
+You are mapping university exam questions to syllabus topics for the subject $subject_name ($subject).
+
+Topic list (ID | unit | topic | keywords):
+$topic_table
+
+For EVERY question below, return one item with:
+- question_id: copied exactly.
+- topic_ids: the 1 or 2 topic IDs from the list that the question mainly tests. Use 2 only if the question clearly needs both. Use only IDs from the list.
+- confidence: high if the question names the topic directly, medium if you inferred it, low if no topic fits well.
+
+Choose the topic the student must know to answer, not words that merely appear in the question. For a numerical problem, choose the method being applied.
+
+Questions:
+$questions

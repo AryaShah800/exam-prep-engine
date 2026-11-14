@@ -1,0 +1,481 @@
+{
+  "subject": "DC",
+  "subject_name": "DISTRIBUTED COMPUTING",
+  "topics": [
+    {
+      "topic_id": "DC-U1-T1",
+      "unit_no": 1,
+      "unit_title": "FUNDAMENTALS OF DISTRIBUTED COMPUTING",
+      "name": "Forms of computing",
+      "keywords": [
+        "forms of computing",
+        "DC",
+        "distributed computing"
+      ]
+    },
+    {
+      "topic_id": "DC-U1-T2",
+      "unit_no": 1,
+      "unit_title": "FUNDAMENTALS OF DISTRIBUTED COMPUTING",
+      "name": "Strengths and weaknesses of DC",
+      "keywords": [
+        "strengths and weaknesses",
+        "DC",
+        "distributed computing"
+      ]
+    },
+    {
+      "topic_id": "DC-U1-T3",
+      "unit_no": 1,
+      "unit_title": "FUNDAMENTALS OF DISTRIBUTED COMPUTING",
+      "name": "Distributed Computing Paradigms and Abstraction",
+      "keywords": [
+        "DC paradigms",
+        "abstraction",
+        "paradigms"
+      ]
+    },
+    {
+      "topic_id": "DC-U1-T4",
+      "unit_no": 1,
+      "unit_title": "FUNDAMENTALS OF DISTRIBUTED COMPUTING",
+      "name": "Paradigms for Distributed Applications",
+      "keywords": [
+        "distributed applications",
+        "paradigms",
+        "trade-offs"
+      ]
+    },
+    {
+      "topic_id": "DC-U2-T1",
+      "unit_no": 2,
+      "unit_title": "SOCKET PROGRAMMING ON UNIX",
+      "name": "Basics of Networking Protocols",
+      "keywords": [
+        "TCP",
+        "UDP",
+        "protocols"
+      ]
+    },
+    {
+      "topic_id": "DC-U2-T2",
+      "unit_no": 2,
+      "unit_title": "SOCKET PROGRAMMING ON UNIX",
+      "name": "Socket API",
+      "keywords": [
+        "Socket API",
+        "UNIX socket",
+        "socket programming"
+      ]
+    },
+    {
+      "topic_id": "DC-U2-T3",
+      "unit_no": 2,
+      "unit_title": "SOCKET PROGRAMMING ON UNIX",
+      "name": "Client-server communication using TCP",
+      "keywords": [
+        "TCP socket",
+        "client-server",
+        "TCP"
+      ]
+    },
+    {
+      "topic_id": "DC-U2-T4",
+      "unit_no": 2,
+      "unit_title": "SOCKET PROGRAMMING ON UNIX",
+      "name": "Client-server communication using UDP",
+      "keywords": [
+        "UDP socket",
+        "client-server",
+        "UDP"
+      ]
+    },
+    {
+      "topic_id": "DC-U2-T5",
+      "unit_no": 2,
+      "unit_title": "SOCKET PROGRAMMING ON UNIX",
+      "name": "Elementary Socket Options",
+      "keywords": [
+        "socket options",
+        "SO_KEEPALIVE",
+        "SO_LINGER",
+        "TCP_NODELAY"
+      ]
+    },
+    {
+      "topic_id": "DC-U3-T1",
+      "unit_no": 3,
+      "unit_title": "gRPC",
+      "name": "gRPC Concepts",
+      "keywords": [
+        "gRPC",
+        "RPC",
+        "remote procedure call"
+      ]
+    },
+    {
+      "topic_id": "DC-U3-T2",
+      "unit_no": 3,
+      "unit_title": "gRPC",
+      "name": "gRPC Architecture",
+      "keywords": [
+        "gRPC architecture",
+        "proto buffers",
+        "gRPC"
+      ]
+    },
+    {
+      "topic_id": "DC-U3-T3",
+      "unit_no": 3,
+      "unit_title": "gRPC",
+      "name": "Application Development using gRPC",
+      "keywords": [
+        "gRPC development",
+        "gRPC app",
+        "gRPC implementation"
+      ]
+    },
+    {
+      "topic_id": "DC-U4-T1",
+      "unit_no": 4,
+      "unit_title": "CONTAINERIZATION - DOCKER",
+      "name": "Docker Overview and Architecture",
+      "keywords": [
+        "Docker overview",
+        "Docker architecture",
+        "Docker Engine"
+      ]
+    },
+    {
+      "topic_id": "DC-U4-T2",
+      "unit_no": 4,
+      "unit_title": "CONTAINERIZATION - DOCKER",
+      "name": "Working with Containers and Commands",
+      "keywords": [
+        "Docker commands",
+        "active containers",
+        "containers"
+      ]
+    },
+    {
+      "topic_id": "DC-U4-T3",
+      "unit_no": 4,
+      "unit_title": "CONTAINERIZATION - DOCKER",
+      "name": "Dockerfile, Docker Images and Registry",
+      "keywords": [
+        "Dockerfile",
+        "FROM",
+        "RUN",
+        "CMD",
+        "ENTRYPOINT",
+        "EXPOSE",
+        "image layers",
+        "build cache",
+        "docker build",
+        "Docker Images",
+        "Docker Registry",
+        "Docker Hub",
+        "docker scan"
+      ]
+    },
+    {
+      "topic_id": "DC-U4-T4",
+      "unit_no": 4,
+      "unit_title": "CONTAINERIZATION - DOCKER",
+      "name": "Docker Compose",
+      "keywords": [
+        "Docker Compose",
+        "docker-compose",
+        "compose"
+      ]
+    },
+    {
+      "topic_id": "DC-U4-T5",
+      "unit_no": 4,
+      "unit_title": "CONTAINERIZATION - DOCKER",
+      "name": "Docker Storage and Volumes",
+      "keywords": [
+        "Docker Storage",
+        "Docker Volumes",
+        "Persist Data"
+      ]
+    },
+    {
+      "topic_id": "DC-U4-T6",
+      "unit_no": 4,
+      "unit_title": "CONTAINERIZATION - DOCKER",
+      "name": "Docker Networking",
+      "keywords": [
+        "Docker Networking",
+        "containers and hosts",
+        "networking"
+      ]
+    },
+    {
+      "topic_id": "DC-U5-T1",
+      "unit_no": 5,
+      "unit_title": "CONTAINER ORCHESTRATION - KUBERNETES",
+      "name": "Kubernetes Architecture and Cluster Setup",
+      "keywords": [
+        "Kubernetes architecture",
+        "K8s cluster",
+        "K8s setup"
+      ]
+    },
+    {
+      "topic_id": "DC-U5-T2",
+      "unit_no": 5,
+      "unit_title": "CONTAINER ORCHESTRATION - KUBERNETES",
+      "name": "K8s Core Components",
+      "keywords": [
+        "Service",
+        "ConfigMap",
+        "Secret",
+        "StatefulSet",
+        "Ingress"
+      ]
+    },
+    {
+      "topic_id": "DC-U5-T3",
+      "unit_no": 5,
+      "unit_title": "CONTAINER ORCHESTRATION - KUBERNETES",
+      "name": "Kubernetes CLI",
+      "keywords": [
+        "kubectl",
+        "Kubectl",
+        "Kubernetes CLI"
+      ]
+    },
+    {
+      "topic_id": "DC-U5-T4",
+      "unit_no": 5,
+      "unit_title": "CONTAINER ORCHESTRATION - KUBERNETES",
+      "name": "Persisting data with K8s Volumes",
+      "keywords": [
+        "K8s Volumes",
+        "persisting data",
+        "volumes"
+      ]
+    },
+    {
+      "topic_id": "DC-U5-T5",
+      "unit_no": 5,
+      "unit_title": "CONTAINER ORCHESTRATION - KUBERNETES",
+      "name": "Namespaces",
+      "keywords": [
+        "Namespaces",
+        "K8s namespaces",
+        "cluster namespaces"
+      ]
+    },
+    {
+      "topic_id": "DC-U6-T1",
+      "unit_no": 6,
+      "unit_title": "MICROSERVICES, APIs AND INTEGRATION",
+      "name": "Microservice vs Monolithic Architecture",
+      "keywords": [
+        "Microservice vs Monolithic",
+        "monolithic architecture",
+        "microservices"
+      ]
+    },
+    {
+      "topic_id": "DC-U6-T2",
+      "unit_no": 6,
+      "unit_title": "MICROSERVICES, APIs AND INTEGRATION",
+      "name": "Microservices Architecture and Design Characteristics",
+      "keywords": [
+        "architecture components",
+        "design characteristics",
+        "challenges"
+      ]
+    },
+    {
+      "topic_id": "DC-U6-T3",
+      "unit_no": 6,
+      "unit_title": "MICROSERVICES, APIs AND INTEGRATION",
+      "name": "Microservices and APIs",
+      "keywords": [
+        "Microservices and APIs",
+        "APIs",
+        "REST API"
+      ]
+    },
+    {
+      "topic_id": "DC-U6-T4",
+      "unit_no": 6,
+      "unit_title": "MICROSERVICES, APIs AND INTEGRATION",
+      "name": "Role of microservices in DevOps",
+      "keywords": [
+        "DevOps",
+        "microservices DevOps",
+        "deployment"
+      ]
+    },
+    {
+      "topic_id": "DC-U6-T5",
+      "unit_no": 6,
+      "unit_title": "MICROSERVICES, APIs AND INTEGRATION",
+      "name": "Orchestration and Management Tools for Microservices",
+      "keywords": [
+        "Microservices orchestration",
+        "deployment tools",
+        "microservice management"
+      ]
+    },
+    {
+      "topic_id": "DC-U7-T1",
+      "unit_no": 7,
+      "unit_title": "AUTHENTICATION AND AUTHORIZATION PROTOCOLS FOR DISTRIBUTED ENVIRONMENT",
+      "name": "OAuth",
+      "keywords": [
+        "OAuth",
+        "OAuth 2.0",
+        "authorization protocol"
+      ]
+    },
+    {
+      "topic_id": "DC-U7-T2",
+      "unit_no": 7,
+      "unit_title": "AUTHENTICATION AND AUTHORIZATION PROTOCOLS FOR DISTRIBUTED ENVIRONMENT",
+      "name": "OpenID Connect",
+      "keywords": [
+        "OpenID Connect",
+        "OIDC",
+        "authentication protocol"
+      ]
+    },
+    {
+      "topic_id": "DC-U7-T3",
+      "unit_no": 7,
+      "unit_title": "AUTHENTICATION AND AUTHORIZATION PROTOCOLS FOR DISTRIBUTED ENVIRONMENT",
+      "name": "SAML",
+      "keywords": [
+        "SAML",
+        "Security Assertion Markup Language",
+        "SAML assertion"
+      ]
+    },
+    {
+      "topic_id": "DC-U8-T1",
+      "unit_no": 8,
+      "unit_title": "DISTRIBUTED SYSTEM PROCESSING USING APACHE KAFKA",
+      "name": "Asynchronous communication",
+      "keywords": [
+        "Asynchronous communication",
+        "async messaging",
+        "event-driven"
+      ]
+    },
+    {
+      "topic_id": "DC-U8-T2",
+      "unit_no": 8,
+      "unit_title": "DISTRIBUTED SYSTEM PROCESSING USING APACHE KAFKA",
+      "name": "Fundamentals of Apache Kafka",
+      "keywords": [
+        "Apache Kafka",
+        "Kafka topics",
+        "Kafka message"
+      ]
+    },
+    {
+      "topic_id": "DC-U8-T3",
+      "unit_no": 8,
+      "unit_title": "DISTRIBUTED SYSTEM PROCESSING USING APACHE KAFKA",
+      "name": "Kafka clusters",
+      "keywords": [
+        "Kafka clusters",
+        "Kafka brokers",
+        "producers consumers"
+      ]
+    },
+    {
+      "topic_id": "DC-U9-T1",
+      "unit_no": 9,
+      "unit_title": "DATA INTENSIVE COMPUTING - (APACHE HADOOP AND APACHE SPARK)",
+      "name": "Hadoop Architecture and HDFS",
+      "keywords": [
+        "Big Data Analytics",
+        "Hadoop Architecture",
+        "HDFS"
+      ]
+    },
+    {
+      "topic_id": "DC-U9-T2",
+      "unit_no": 9,
+      "unit_title": "DATA INTENSIVE COMPUTING - (APACHE HADOOP AND APACHE SPARK)",
+      "name": "Map-Reduce and YARN",
+      "keywords": [
+        "Map-Reduce",
+        "YARN",
+        "Word Count in Hadoop"
+      ]
+    },
+    {
+      "topic_id": "DC-U9-T3",
+      "unit_no": 9,
+      "unit_title": "DATA INTENSIVE COMPUTING - (APACHE HADOOP AND APACHE SPARK)",
+      "name": "Apache Spark and In-Memory Computing",
+      "keywords": [
+        "Apache Spark",
+        "In-Memory Computing",
+        "Data-intensive computing"
+      ]
+    },
+    {
+      "topic_id": "DC-U10-T1",
+      "unit_no": 10,
+      "unit_title": "ORCHESTRATION OF MICROSERVICES",
+      "name": "Microservice orchestration",
+      "keywords": [
+        "Microservice orchestration",
+        "orchestration",
+        "microservice workflows"
+      ]
+    },
+    {
+      "topic_id": "DC-U10-T2",
+      "unit_no": 10,
+      "unit_title": "ORCHESTRATION OF MICROSERVICES",
+      "name": "AWS Step Functions",
+      "keywords": [
+        "AWS step functions",
+        "Step Functions",
+        "AWS cloud orchestration"
+      ]
+    },
+    {
+      "topic_id": "DC-U11-T1",
+      "unit_no": 11,
+      "unit_title": "CASE STUDIES: FACEBOOK/GOOGLE/NETFLIX ARCHITECTURE",
+      "name": "Netflix Technology Stack",
+      "keywords": [
+        "Netflix Technology Stack",
+        "AWS",
+        "Apache Cassandra"
+      ]
+    },
+    {
+      "topic_id": "DC-U11-T2",
+      "unit_no": 11,
+      "unit_title": "CASE STUDIES: FACEBOOK/GOOGLE/NETFLIX ARCHITECTURE",
+      "name": "Content Delivery Network (CDN)",
+      "keywords": [
+        "CDN",
+        "Content Delivery Network",
+        "caching"
+      ]
+    },
+    {
+      "topic_id": "DC-U11-T3",
+      "unit_no": 11,
+      "unit_title": "CASE STUDIES: FACEBOOK/GOOGLE/NETFLIX ARCHITECTURE",
+      "name": "Batch Processing and Microservices Architecture",
+      "keywords": [
+        "Batch Processing",
+        "Microservices Architecture",
+        "Apache Chukwa"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# University papers and everything derived from them stay off GitHub.
+data/raw/
+data/interim/
+data/processed/
+data/cache/
+data/review/
+data/papers.csv
+# Other universities' papers: PDFs stay local; SOURCES.csv (provenance + URLs) can be committed.
+data/external/*/
+# Commit a small sample by hand later with: git add -f data/sample/...
+# Experiment tracking (local MLflow file store) and generated answers
+mlruns/
+mlflow.db
+mlartifacts/
+data/eval/

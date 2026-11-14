@@ -1,0 +1,376 @@
+{
+  "subject": "AI",
+  "subject_name": "ARTIFICIAL INTELLIGENCE",
+  "topics": [
+    {
+      "topic_id": "AI-U1-T1",
+      "unit_no": 1,
+      "unit_title": "INTRODUCTION",
+      "name": "Definitions of AI",
+      "keywords": [
+        "AI definitions",
+        "thinking rationally",
+        "acting humanly"
+      ]
+    },
+    {
+      "topic_id": "AI-U1-T2",
+      "unit_no": 1,
+      "unit_title": "INTRODUCTION",
+      "name": "Phases and History of AI",
+      "keywords": [
+        "AI history",
+        "current status of AI",
+        "phases of AI"
+      ]
+    },
+    {
+      "topic_id": "AI-U2-T1",
+      "unit_no": 2,
+      "unit_title": "PROBLEM-SOLVING BY BASIC SEARCH TECHNIQUES",
+      "name": "Breadth-first Search",
+      "keywords": [
+        "BFS",
+        "queue",
+        "breadth-first search"
+      ]
+    },
+    {
+      "topic_id": "AI-U2-T2",
+      "unit_no": 2,
+      "unit_title": "PROBLEM-SOLVING BY BASIC SEARCH TECHNIQUES",
+      "name": "Depth-first Search",
+      "keywords": [
+        "DFS",
+        "stack",
+        "depth-first search"
+      ]
+    },
+    {
+      "topic_id": "AI-U2-T3",
+      "unit_no": 2,
+      "unit_title": "PROBLEM-SOLVING BY BASIC SEARCH TECHNIQUES",
+      "name": "Depth-limited Search",
+      "keywords": [
+        "DLS",
+        "depth limit"
+      ]
+    },
+    {
+      "topic_id": "AI-U2-T4",
+      "unit_no": 2,
+      "unit_title": "PROBLEM-SOLVING BY BASIC SEARCH TECHNIQUES",
+      "name": "Iterative deepening depth-first search",
+      "keywords": [
+        "IDDFS",
+        "iterative deepening"
+      ]
+    },
+    {
+      "topic_id": "AI-U2-T5",
+      "unit_no": 2,
+      "unit_title": "PROBLEM-SOLVING BY BASIC SEARCH TECHNIQUES",
+      "name": "Uniform cost search",
+      "keywords": [
+        "UCS",
+        "path cost",
+        "dijkstra"
+      ]
+    },
+    {
+      "topic_id": "AI-U2-T6",
+      "unit_no": 2,
+      "unit_title": "PROBLEM-SOLVING BY BASIC SEARCH TECHNIQUES",
+      "name": "Bidirectional Search",
+      "keywords": [
+        "bidirectional",
+        "forward and backward search"
+      ]
+    },
+    {
+      "topic_id": "AI-U2-T7",
+      "unit_no": 2,
+      "unit_title": "PROBLEM-SOLVING BY BASIC SEARCH TECHNIQUES",
+      "name": "Search terminology and properties of search algorithms",
+      "keywords": [
+        "state",
+        "state space",
+        "problem space",
+        "tree search vs graph search",
+        "explored set",
+        "completeness",
+        "optimality",
+        "time complexity",
+        "space complexity",
+        "memory requirement"
+      ]
+    },
+    {
+      "topic_id": "AI-U3-T1",
+      "unit_no": 3,
+      "unit_title": "PROBLEM-SOLVING BY INFORMED SEARCH TECHNIQUES",
+      "name": "Best first search",
+      "keywords": [
+        "greedy best first",
+        "heuristic search"
+      ]
+    },
+    {
+      "topic_id": "AI-U3-T2",
+      "unit_no": 3,
+      "unit_title": "PROBLEM-SOLVING BY INFORMED SEARCH TECHNIQUES",
+      "name": "A* algorithm",
+      "keywords": [
+        "A*",
+        "f(n)=g(n)+h(n)",
+        "optimal search"
+      ]
+    },
+    {
+      "topic_id": "AI-U3-T3",
+      "unit_no": 3,
+      "unit_title": "PROBLEM-SOLVING BY INFORMED SEARCH TECHNIQUES",
+      "name": "Admissible Heuristic",
+      "keywords": [
+        "admissibility",
+        "h(n) bound",
+        "heuristics"
+      ]
+    },
+    {
+      "topic_id": "AI-U3-T4",
+      "unit_no": 3,
+      "unit_title": "PROBLEM-SOLVING BY INFORMED SEARCH TECHNIQUES",
+      "name": "IDA*",
+      "keywords": [
+        "Iterative Deepening A*",
+        "IDA star"
+      ]
+    },
+    {
+      "topic_id": "AI-U4-T1",
+      "unit_no": 4,
+      "unit_title": "PROBLEM-SOLVING BY LOCAL SEARCH TECHNIQUES",
+      "name": "Hill climbing",
+      "keywords": [
+        "hill climbing",
+        "local maxima",
+        "plateau",
+        "foothills"
+      ]
+    },
+    {
+      "topic_id": "AI-U4-T2",
+      "unit_no": 4,
+      "unit_title": "PROBLEM-SOLVING BY LOCAL SEARCH TECHNIQUES",
+      "name": "Simulated annealing",
+      "keywords": [
+        "simulated annealing",
+        "temperature",
+        "cooling schedule"
+      ]
+    },
+    {
+      "topic_id": "AI-U4-T3",
+      "unit_no": 4,
+      "unit_title": "PROBLEM-SOLVING BY LOCAL SEARCH TECHNIQUES",
+      "name": "Genetic algorithm",
+      "keywords": [
+        "GA",
+        "crossover",
+        "mutation",
+        "chromosome"
+      ]
+    },
+    {
+      "topic_id": "AI-U5-T1",
+      "unit_no": 5,
+      "unit_title": "ADVERSARIAL SEARCH",
+      "name": "Minimax Algorithm",
+      "keywords": [
+        "minimax",
+        "max node",
+        "min node",
+        "game tree"
+      ]
+    },
+    {
+      "topic_id": "AI-U5-T2",
+      "unit_no": 5,
+      "unit_title": "ADVERSARIAL SEARCH",
+      "name": "Alpha-Beta Pruning",
+      "keywords": [
+        "alpha-beta",
+        "pruning",
+        "alpha cutoff",
+        "beta cutoff"
+      ]
+    },
+    {
+      "topic_id": "AI-U6-T1",
+      "unit_no": 6,
+      "unit_title": "LOGIC AND INFERENCE",
+      "name": "Types of logic",
+      "keywords": [
+        "propositional logic",
+        "PL",
+        "FOL",
+        "first order logic",
+        "fuzzy logic"
+      ]
+    },
+    {
+      "topic_id": "AI-U6-T2",
+      "unit_no": 6,
+      "unit_title": "LOGIC AND INFERENCE",
+      "name": "Expert systems",
+      "keywords": [
+        "expert systems",
+        "knowledge base"
+      ]
+    },
+    {
+      "topic_id": "AI-U6-T3",
+      "unit_no": 6,
+      "unit_title": "LOGIC AND INFERENCE",
+      "name": "CNF and Resolution",
+      "keywords": [
+        "CNF",
+        "conjunctive normal form",
+        "resolution rule"
+      ]
+    },
+    {
+      "topic_id": "AI-U6-T4",
+      "unit_no": 6,
+      "unit_title": "LOGIC AND INFERENCE",
+      "name": "Forward Chaining",
+      "keywords": [
+        "forward chaining",
+        "inference rules",
+        "modus ponens"
+      ]
+    },
+    {
+      "topic_id": "AI-U7-T1",
+      "unit_no": 7,
+      "unit_title": "UNCERTAINTY HANDLING",
+      "name": "Conditional independence and Bayes rule",
+      "keywords": [
+        "Bayes rule",
+        "conditional probability",
+        "prior probability"
+      ]
+    },
+    {
+      "topic_id": "AI-U7-T2",
+      "unit_no": 7,
+      "unit_title": "UNCERTAINTY HANDLING",
+      "name": "Bayesian networks syntax",
+      "keywords": [
+        "Bayes net",
+        "DAG",
+        "conditional probability table",
+        "CPT"
+      ]
+    },
+    {
+      "topic_id": "AI-U7-T3",
+      "unit_no": 7,
+      "unit_title": "UNCERTAINTY HANDLING",
+      "name": "Inference using variable elimination",
+      "keywords": [
+        "variable elimination",
+        "marginalization",
+        "exact inference"
+      ]
+    },
+    {
+      "topic_id": "AI-U8-T1",
+      "unit_no": 8,
+      "unit_title": "MARKOV DECISION PROCESS",
+      "name": "Policy iteration",
+      "keywords": [
+        "policy iteration",
+        "bellman equation",
+        "optimal policy"
+      ]
+    },
+    {
+      "topic_id": "AI-U8-T2",
+      "unit_no": 8,
+      "unit_title": "MARKOV DECISION PROCESS",
+      "name": "Policy evaluation",
+      "keywords": [
+        "policy evaluation",
+        "value function"
+      ]
+    },
+    {
+      "topic_id": "AI-U8-T3",
+      "unit_no": 8,
+      "unit_title": "MARKOV DECISION PROCESS",
+      "name": "Extensions of MDP",
+      "keywords": [
+        "MDP",
+        "markov decision process",
+        "states and actions"
+      ]
+    },
+    {
+      "topic_id": "AI-U9-T1",
+      "unit_no": 9,
+      "unit_title": "REINFORCEMENT LEARNING",
+      "name": "Model-based learning for policy evaluation",
+      "keywords": [
+        "model-based RL",
+        "transition model",
+        "reward function"
+      ]
+    },
+    {
+      "topic_id": "AI-U9-T2",
+      "unit_no": 9,
+      "unit_title": "REINFORCEMENT LEARNING",
+      "name": "Q learning",
+      "keywords": [
+        "Q-learning",
+        "Q table",
+        "temporal difference",
+        "off-policy"
+      ]
+    },
+    {
+      "topic_id": "AI-U10-T1",
+      "unit_no": 10,
+      "unit_title": "ETHICS OF AI",
+      "name": "Transparency, privacy and accountability",
+      "keywords": [
+        "AI privacy",
+        "transparency",
+        "accountability"
+      ]
+    },
+    {
+      "topic_id": "AI-U10-T2",
+      "unit_no": 10,
+      "unit_title": "ETHICS OF AI",
+      "name": "AI Governance",
+      "keywords": [
+        "governance",
+        "AI regulation"
+      ]
+    },
+    {
+      "topic_id": "AI-U10-T3",
+      "unit_no": 10,
+      "unit_title": "ETHICS OF AI",
+      "name": "Fairness and data bias",
+      "keywords": [
+        "bias",
+        "data bias",
+        "algorithmic fairness"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "subject": "MLDL",
+  "subject_name": "MACHINE LEARNING & DEEP LEARNING",
+  "topics": [
+    {
+      "topic_id": "MLDL-U1-T1",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Types of Machine Learning",
+      "keywords": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement Learning"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T2",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Machine Learning Design Cycle",
+      "keywords": [
+        "Machine Learning Design Cycle",
+        "Pipeline",
+        "Data Preprocessing",
+        "pandas",
+        "Series",
+        "DataFrame",
+        "missing values",
+        "MCAR",
+        "MAR",
+        "data preprocessing"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T3",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Decision Tree Classification",
+      "keywords": [
+        "Decision Tree",
+        "Classification",
+        "Split Criterion"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T4",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Naïve Bayes",
+      "keywords": [
+        "Naïve Bayes",
+        "Bayes Theorem",
+        "Prior Probability"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T5",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Support Vector Machines",
+      "keywords": [
+        "SVM",
+        "Support Vector Machines",
+        "Hyperplane",
+        "Kernel"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T6",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Ensemble Learning and Random Forests",
+      "keywords": [
+        "Ensemble Learning",
+        "Random Forest",
+        "Bagging",
+        "Boosting"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T7",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Linear and Polynomial Regression",
+      "keywords": [
+        "Linear Regression",
+        "Polynomial Regression",
+        "Least Squares"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T8",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Logistic Regression",
+      "keywords": [
+        "Logistic Regression",
+        "Sigmoid Function",
+        "Binary Classification"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U1-T9",
+      "unit_no": 1,
+      "unit_title": "BASICS OF MACHINE LEARNING",
+      "name": "Clustering",
+      "keywords": [
+        "Clustering",
+        "K-Means",
+        "Unsupervised Clustering"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U2-T1",
+      "unit_no": 2,
+      "unit_title": "NEURAL NETWORKS",
+      "name": "Single Layer Perceptron Model",
+      "keywords": [
+        "Perceptron",
+        "Single Layer Perceptron",
+        "Learning Rule"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U2-T2",
+      "unit_no": 2,
+      "unit_title": "NEURAL NETWORKS",
+      "name": "Gradient Descent Training",
+      "keywords": [
+        "Gradient Descent",
+        "Learning Rate",
+        "Optimization"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U2-T3",
+      "unit_no": 2,
+      "unit_title": "NEURAL NETWORKS",
+      "name": "Multilayer Perceptron and Backpropagation",
+      "keywords": [
+        "MLP",
+        "Multilayer Perceptron",
+        "Backpropagation",
+        "Chain Rule"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U2-T4",
+      "unit_no": 2,
+      "unit_title": "NEURAL NETWORKS",
+      "name": "Avoiding Overfitting Through Regularization",
+      "keywords": [
+        "Overfitting",
+        "Regularization",
+        "L1 Regularization",
+        "L2 Regularization"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U2-T5",
+      "unit_no": 2,
+      "unit_title": "NEURAL NETWORKS",
+      "name": "Dimensionality Reduction and PCA",
+      "keywords": [
+        "PCA",
+        "Principal Component Analysis",
+        "Dimensionality Reduction",
+        "Curse of Dimensionality"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U3-T1",
+      "unit_no": 3,
+      "unit_title": "CONVOLUTIONAL NEURAL NETWORKS",
+      "name": "Activation and Loss Functions",
+      "keywords": [
+        "Activation Function",
+        "Loss Function",
+        "ReLU",
+        "Cross-Entropy"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U3-T2",
+      "unit_no": 3,
+      "unit_title": "CONVOLUTIONAL NEURAL NETWORKS",
+      "name": "Building Blocks of CNN",
+      "keywords": [
+        "Convolution Layer",
+        "Pooling Layer",
+        "Dropout Layer",
+        "Batch Normalization",
+        "auxiliary classifier",
+        "Inception",
+        "GoogLeNet"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U3-T3",
+      "unit_no": 3,
+      "unit_title": "CONVOLUTIONAL NEURAL NETWORKS",
+      "name": "Transfer Learning",
+      "keywords": [
+        "Transfer Learning",
+        "Pre-trained Model",
+        "Fine-Tuning"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U3-T4",
+      "unit_no": 3,
+      "unit_title": "CONVOLUTIONAL NEURAL NETWORKS",
+      "name": "Residual Networks and Skip Connections",
+      "keywords": [
+        "ResNet",
+        "Residual Networks",
+        "Skip Connection"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U4-T1",
+      "unit_no": 4,
+      "unit_title": "COMPUTER VISION",
+      "name": "Image Classification and Localization",
+      "keywords": [
+        "Image Classification",
+        "Localization",
+        "Bounding Box"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U4-T2",
+      "unit_no": 4,
+      "unit_title": "COMPUTER VISION",
+      "name": "Semantic Segmentation and Object Detection",
+      "keywords": [
+        "Semantic Segmentation",
+        "Object Detection",
+        "Segmentation Mask"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U4-T3",
+      "unit_no": 4,
+      "unit_title": "COMPUTER VISION",
+      "name": "Siamese Network",
+      "keywords": [
+        "Siamese Network",
+        "Triplet Loss",
+        "Similarity Metric"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U4-T4",
+      "unit_no": 4,
+      "unit_title": "COMPUTER VISION",
+      "name": "Auto Encoders and Stacked Auto Encoders",
+      "keywords": [
+        "Autoencoders",
+        "Stacked Autoencoders",
+        "Latent Space",
+        "Reconstruction Loss"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U5-T1",
+      "unit_no": 5,
+      "unit_title": "SEQUENCE MODELS",
+      "name": "Recurrent Neural Network",
+      "keywords": [
+        "RNN",
+        "Recurrent Neural Network",
+        "Hidden State"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U5-T2",
+      "unit_no": 5,
+      "unit_title": "SEQUENCE MODELS",
+      "name": "Long-Short Term Memory Network",
+      "keywords": [
+        "LSTM",
+        "Long-Short Term Memory",
+        "Forget Gate",
+        "Cell State"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U5-T3",
+      "unit_no": 5,
+      "unit_title": "SEQUENCE MODELS",
+      "name": "Gated Recurrent Unit",
+      "keywords": [
+        "GRU",
+        "Gated Recurrent Unit",
+        "Update Gate",
+        "Reset Gate"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U5-T4",
+      "unit_no": 5,
+      "unit_title": "SEQUENCE MODELS",
+      "name": "Bi-directional and Deep RNN",
+      "keywords": [
+        "Bi-directional RNN",
+        "Deep RNN",
+        "Sequence Modeling"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U5-T5",
+      "unit_no": 5,
+      "unit_title": "SEQUENCE MODELS",
+      "name": "Text representation (one-hot, BoW, TF-IDF, n-grams, word embeddings)",
+      "keywords": [
+        "one-hot encoding",
+        "bag of words",
+        "BoW",
+        "TF-IDF",
+        "n-gram",
+        "word embeddings",
+        "word2vec"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U6-T1",
+      "unit_no": 6,
+      "unit_title": "GENERATIVE AI",
+      "name": "Large Language Models",
+      "keywords": [
+        "LLM",
+        "Large Language Models",
+        "Text Generation Models"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U6-T2",
+      "unit_no": 6,
+      "unit_title": "GENERATIVE AI",
+      "name": "Image and Video Generation Models",
+      "keywords": [
+        "Image Generation Models",
+        "Video Generation Models",
+        "Generative AI"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U6-T3",
+      "unit_no": 6,
+      "unit_title": "GENERATIVE AI",
+      "name": "Prompt Engineering",
+      "keywords": [
+        "Prompt Engineering",
+        "Prompts",
+        "AI Tools"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U6-T4",
+      "unit_no": 6,
+      "unit_title": "GENERATIVE AI",
+      "name": "Transformer architecture and attention",
+      "keywords": [
+        "transformer",
+        "self-attention",
+        "Query Key Value",
+        "QKV",
+        "multi-head attention",
+        "masked attention",
+        "positional encoding",
+        "encoder-decoder"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U6-T5",
+      "unit_no": 6,
+      "unit_title": "GENERATIVE AI",
+      "name": "AI agents and AI tools for business applications",
+      "keywords": [
+        "agentic AI",
+        "AI agents",
+        "AI tools",
+        "business applications",
+        "tool use"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U7-T1",
+      "unit_no": 7,
+      "unit_title": "ADVANCED TOPICS",
+      "name": "Explainable AI",
+      "keywords": [
+        "XAI",
+        "Explainable AI",
+        "Interpretability"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U7-T2",
+      "unit_no": 7,
+      "unit_title": "ADVANCED TOPICS",
+      "name": "MLOps",
+      "keywords": [
+        "MLOps",
+        "Model Deployment",
+        "ML Pipeline"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U7-T3",
+      "unit_no": 7,
+      "unit_title": "ADVANCED TOPICS",
+      "name": "Ethical & Social Considerations in ML",
+      "keywords": [
+        "Ethical Considerations",
+        "Social Considerations",
+        "AI Bias"
+      ]
+    },
+    {
+      "topic_id": "MLDL-U7-T4",
+      "unit_no": 7,
+      "unit_title": "ADVANCED TOPICS",
+      "name": "Privacy-preserving and sustainable AI",
+      "keywords": [
+        "federated learning",
+        "FedAvg",
+        "privacy-preserving",
+        "Green AI",
+        "sustainable AI",
+        "energy efficiency"
+      ]
+    }
+  ]
+}

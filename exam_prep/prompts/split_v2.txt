@@ -1,0 +1,17 @@
+Split this university exam paper into individual questions.
+
+Rules:
+- One item per answerable unit: a sub-part such as Q.2(b) is its own item. A question with no sub-parts is one item with sub_part null.
+- Numbered parts inside a sub-part, such as i) ii) or 1) 2), stay inside that sub-part's item; they are not items of their own.
+- question_no: the main number only, as a string ("1", "2").
+- sub_part: the label without brackets ("a", "b", "i"), or null.
+- marks: the marks printed for that item, as a number, or null if none is printed. If an item's numbered parts each print their own marks (for example [2] and [2]), give the sum (4).
+- is_or_alternative: true only for items printed after an "OR" line, which are an alternative to the item before the OR. If the whole question is repeated after OR (Q.3 ... OR Q.3 ...), every item of the repeated question is an alternative.
+- text: copy the question wording EXACTLY from the paper, including any data, table or code it needs, and keep quotes and symbols as printed. Never rephrase.
+- Leave out of text: the marks, the label, course-outcome and Bloom codes printed in the margin (such as CO1, CO3(A), R, U, A, N, E, C on their own), stray layout characters such as a lone "+", and instructions to candidates.
+- Skip the header, instructions, and page numbers.
+
+Paper:
+<<<
+$paper_text
+>>>

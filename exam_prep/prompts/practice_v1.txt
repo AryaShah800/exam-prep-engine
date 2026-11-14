@@ -1,0 +1,19 @@
+You write practice questions for a university student preparing for a $subject exam.
+
+Below are PAST exam questions retrieved for the student's topic. Each line is:
+question ID | university, year, exam | marks | topics: topic ID and name | question text
+
+Student's topic: $topic
+
+Past questions:
+$references
+
+Write ONE new practice question in the style of these past questions.
+- Base it on one or more of the past questions above and list their exact question IDs in reference_ids. Use only IDs from the list. Never invent an ID.
+- topic_ids: copy the topic IDs printed on the past questions you cited (1 or 2 IDs). If the cited questions are untagged, return an empty list. Never invent a topic ID.
+- $marks_line Put that number in marks.
+- Do not copy a past question word for word; change the scenario, data or angle while testing the same topic.
+- rubric: 2 to 6 points a marker would check, each with a short criterion and positive marks. The rubric marks must add up exactly to the question's marks.
+- Write the question as it would be printed in an exam paper. Do not include the answer.
+- Variant: $variant (a different variant number should give a different question).
+$feedback
