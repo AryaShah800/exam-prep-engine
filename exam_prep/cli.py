@@ -86,6 +86,20 @@ def _evaluate(args) -> None:
     print(f"  report: {evaluate.save(golden, version, results, emb.model)}  ({emb.api_calls} new embedding calls)")
 
 
+def _demo(port: int) -> None:
+    from pathlib import Path
+    sample = Path(__file__).resolve().parent.parent / "demo"
+    if not (sample / "data" / "processed" / "questions_tagged.jsonl").exists():
+        raise SystemExit("demo/data is missing. Run: python scripts/build_sample_corpus.py")
+    config.set_root(sample)
+    config.OFFLINE = True
+    config.PRIMARY_SOURCE = "SAMPLE"
+    import uvicorn
+    from .web import app
+    print(f"Demo on http://127.0.0.1:{port}  (synthetic sample questions; keyword practice and grading, no LLM)")
+    uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")
+
+
 def main(argv: Optional[list[str]] = None) -> int:
     for stream in (sys.stdout, sys.stderr):   # Windows consoles default to cp1252, which cannot print maths symbols in questions
         if hasattr(stream, "reconfigure"):
@@ -157,9 +171,14 @@ def main(argv: Optional[list[str]] = None) -> int:
     a = sub.add_parser("all", help="extract -> split -> tag -> export (taxonomies must exist)")
     a.add_argument("--subject")
 
+    d = sub.add_parser("demo", help="serve the UI on the bundled synthetic sample bank (no API key, no private data)")
+    d.add_argument("--port", type=int, default=8000)
+
     args = p.parse_args(argv)
     try:
-        if args.cmd == "extract":
+        if args.cmd == "demo":
+            _demo(args.port)
+        elif args.cmd == "extract":
             metas = discover_papers(subject=args.subject, source=args.source)
             print(f"Extracting {len(metas)} papers")
             print(extract.run(metas, _llm(vision=True, required=False), overwrite=args.overwrite, force_ocr=args.force_ocr))

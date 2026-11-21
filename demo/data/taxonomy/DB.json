@@ -1,0 +1,134 @@
+{
+  "subject": "DB",
+  "subject_name": "Database Management Systems",
+  "topics": [
+    {
+      "topic_id": "DB-U1-T1",
+      "unit_no": 1,
+      "unit_title": "Normalization",
+      "name": "Normalization",
+      "keywords": [
+        "1nf",
+        "2nf",
+        "3nf",
+        "anomalies",
+        "anomaly",
+        "bcnf",
+        "candidate",
+        "decomposition"
+      ]
+    },
+    {
+      "topic_id": "DB-U2-T1",
+      "unit_no": 2,
+      "unit_title": "Transactions and ACID",
+      "name": "Transactions and ACID",
+      "keywords": [
+        "abort",
+        "acid",
+        "atomic",
+        "cascade",
+        "commit",
+        "conflict",
+        "consistency",
+        "durability"
+      ]
+    },
+    {
+      "topic_id": "DB-U3-T1",
+      "unit_no": 3,
+      "unit_title": "Concurrency control",
+      "name": "Concurrency control",
+      "keywords": [
+        "deadlock",
+        "exclusive",
+        "graph",
+        "growing",
+        "lock",
+        "optimistic",
+        "read",
+        "rule"
+      ]
+    },
+    {
+      "topic_id": "DB-U4-T1",
+      "unit_no": 4,
+      "unit_title": "Indexing and B+ trees",
+      "name": "Indexing and B+ trees",
+      "keywords": [
+        "balanced",
+        "bucket",
+        "clustering",
+        "dense",
+        "hash",
+        "leaf",
+        "node",
+        "order"
+      ]
+    },
+    {
+      "topic_id": "DB-U5-T1",
+      "unit_no": 5,
+      "unit_title": "SQL queries and joins",
+      "name": "SQL queries and joins",
+      "keywords": [
+        "aggregate",
+        "avg",
+        "correlated",
+        "count",
+        "except",
+        "exists",
+        "group",
+        "having"
+      ]
+    },
+    {
+      "topic_id": "DB-U6-T1",
+      "unit_no": 6,
+      "unit_title": "ER modelling",
+      "name": "ER modelling",
+      "keywords": [
+        "attribute",
+        "cardinality",
+        "convert",
+        "diagram",
+        "entity",
+        "foreign",
+        "key",
+        "many"
+      ]
+    },
+    {
+      "topic_id": "DB-U7-T1",
+      "unit_no": 7,
+      "unit_title": "Query processing and optimization",
+      "name": "Query processing and optimization",
+      "keywords": [
+        "algebra",
+        "cost",
+        "execution",
+        "hash",
+        "heuristic",
+        "merge",
+        "nested",
+        "optimiz"
+      ]
+    },
+    {
+      "topic_id": "DB-U8-T1",
+      "unit_no": 8,
+      "unit_title": "Recovery and logging",
+      "name": "Recovery and logging",
+      "keywords": [
+        "analysis",
+        "aries",
+        "buffer",
+        "checkpoint",
+        "crash",
+        "deferred",
+        "immediate",
+        "log"
+      ]
+    }
+  ]
+}

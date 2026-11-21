@@ -2,6 +2,22 @@
 
 Hybrid-retrieval study tool over university past papers (DDU Nadiad, B.Tech IT, Semester 7). It finds the exact paper and question for a topic, writes answers whose citations are validated in code, generates practice questions and grades student answers against a rubric.
 
+## Try it now (no API key, no private data)
+
+The repository ships a **synthetic sample bank**: 120 exam-style questions over three subjects (Operating Systems, Databases, Machine Learning), written for this project, not taken from any university paper. The demo runs entirely offline.
+
+```powershell
+python -m venv .venv; .venv\Scripts\activate
+pip install -r requirements-web.txt
+python -m exam_prep demo          # http://127.0.0.1:8000
+```
+
+| Search with per-ranker ranks | Practice question + marking scheme + marked answer | Topic history |
+| --- | --- | --- |
+| ![search](docs/ui-search.png) | ![practice](docs/ui-practice.png) | ![history](docs/ui-history.png) |
+
+In demo mode practice questions come from the sample bank and answers are marked by a **keyword-coverage grader** (`exam_prep/offline.py`), not an LLM: it counts expected terms, so it can be gamed by keyword stuffing and it does not check correctness. It has not been compared with human graders. Cited answers need an LLM and are disabled. Rebuild the bank with `python scripts/build_sample_corpus.py`; the browser flows are tested by `pytest tests/test_ui_e2e.py` (needs `pip install playwright` and Microsoft Edge).
+
 ## Status and what is verified
 
 | Item | State |
@@ -278,3 +294,19 @@ Honesty rules for these numbers:
 ## What Phase A gives the resume
 
 Run `python -m exam_prep stats` and use the real numbers only: DDU papers, questions, subjects, and the tag accuracy from your review report. `external_*` numbers describe the practice bank and must not be added to the DDU paper count.
+
+## Grader sanity check (synthetic)
+
+`python scripts/grader_synthetic_check.py` builds answers of controlled quality from the sample rubrics and grades them with the keyword grader (`reports/grader_synthetic_check.json`). It checks ordering (full > partial > off-topic held for all 24 topics) and exposes weaknesses: a bare keyword list used to earn 100% and is now capped at 50% (prose detection by function-word share). Answers are built from the grader's own keyword lists, so this is not agreement with human graders.
+
+## Paraphrase-only retrieval check (synthetic bank)
+
+`python scripts/eval_sample.py` (needs `pip install -r requirements.txt`; downloads the local bge-base model once) scores 48 hand-written paraphrase queries (two per topic, written to avoid the bank's wording; mean query-word overlap with relevant questions 0.126) against the 120 sample questions; relevance = same topic. Report: `demo/reports/retrieval_eval_sample_paraphrase_bge-base-en-v1-5.md`.
+
+| Ranker | Recall@5 | Hit@5 | MRR@10 | nDCG@10 |
+| --- | --- | --- | --- | --- |
+| BM25 | 0.208 | 0.542 | 0.397 | 0.245 |
+| Dense (bge-base) | 0.454 | 0.917 | 0.714 | 0.609 |
+| Hybrid (RRF) | 0.417 | 0.875 | 0.736 | 0.597 |
+
+When queries share little vocabulary with the questions, keyword search collapses and embeddings carry most of the signal; hybrid is not better than dense here. This contrasts with the AI-written golden set above, where BM25 is already near saturation. Single run on a small synthetic bank by one author (no confidence intervals computed in this table); it says nothing about real papers.

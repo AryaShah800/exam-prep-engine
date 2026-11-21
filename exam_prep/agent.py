@@ -12,6 +12,7 @@ from dataclasses import asdict, dataclass
 from functools import lru_cache
 from typing import Any, Callable, Literal, Optional, TypedDict, get_args
 from pydantic import BaseModel, Field, ValidationError, model_validator
+from . import config
 from .intelligence import MAX_MARKS, MAX_RUBRIC_POINTS, IntelligenceError, Practice, RubricPoint, generate_practice, grade_answer, predict_topics
 from .retrieval import Chunk, Filters
 
@@ -152,12 +153,19 @@ def tool_predict_topics(a: PredictArgs, s: Services) -> dict:
 
 
 def tool_generate_question(a: PracticeArgs, s: Services) -> dict:
+    if config.OFFLINE:
+        from .offline import generate_practice_offline
+        return generate_practice_offline(a.topic, s.retriever_for('bm25'), a.subject, marks=a.marks, source=a.source,
+                                         k=a.k, variant=a.variant)
     llm = s.llm()
     return practice_dict(generate_practice(a.topic, s.retriever_for(a.mode), llm, a.subject, marks=a.marks,
                                            source=a.source, k=a.k, mode=a.mode, variant=a.variant))
 
 
 def tool_grade_answer(a: GradeArgs, s: Services) -> dict:
+    if config.OFFLINE:
+        from .offline import grade_keywords
+        return grade_keywords(a.rubric, a.answer)
     return asdict(grade_answer(a.question, a.rubric, a.answer, s.llm()))
 
 

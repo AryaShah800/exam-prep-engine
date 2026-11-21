@@ -1,0 +1,134 @@
+{
+  "subject": "OS",
+  "subject_name": "Operating Systems",
+  "topics": [
+    {
+      "topic_id": "OS-U1-T1",
+      "unit_no": 1,
+      "unit_title": "Process scheduling",
+      "name": "Process scheduling",
+      "keywords": [
+        "aging",
+        "convoy",
+        "fcfs",
+        "first",
+        "preempt",
+        "quantum",
+        "queue",
+        "response"
+      ]
+    },
+    {
+      "topic_id": "OS-U2-T1",
+      "unit_no": 2,
+      "unit_title": "Deadlocks",
+      "name": "Deadlocks",
+      "keywords": [
+        "allocation",
+        "available",
+        "banker",
+        "circular",
+        "cycle",
+        "detect",
+        "exclusion",
+        "graph"
+      ]
+    },
+    {
+      "topic_id": "OS-U3-T1",
+      "unit_no": 3,
+      "unit_title": "Memory management and paging",
+      "name": "Memory management and paging",
+      "keywords": [
+        "best",
+        "compaction",
+        "external",
+        "first",
+        "fragment",
+        "frame",
+        "hole",
+        "internal"
+      ]
+    },
+    {
+      "topic_id": "OS-U4-T1",
+      "unit_no": 4,
+      "unit_title": "Virtual memory and page replacement",
+      "name": "Virtual memory and page replacement",
+      "keywords": [
+        "anomaly",
+        "belady",
+        "bit",
+        "demand",
+        "disk",
+        "fault",
+        "fifo",
+        "lru"
+      ]
+    },
+    {
+      "topic_id": "OS-U5-T1",
+      "unit_no": 5,
+      "unit_title": "Process synchronization",
+      "name": "Process synchronization",
+      "keywords": [
+        "bounded",
+        "buffer",
+        "condition",
+        "consumer",
+        "critical",
+        "exclusion",
+        "monitor",
+        "mutex"
+      ]
+    },
+    {
+      "topic_id": "OS-U6-T1",
+      "unit_no": 6,
+      "unit_title": "File systems",
+      "name": "File systems",
+      "keywords": [
+        "access",
+        "acl",
+        "allocation",
+        "bit",
+        "bitmap",
+        "block",
+        "contiguous",
+        "control"
+      ]
+    },
+    {
+      "topic_id": "OS-U7-T1",
+      "unit_no": 7,
+      "unit_title": "Disk scheduling",
+      "name": "Disk scheduling",
+      "keywords": [
+        "cylinder",
+        "fcfs",
+        "head",
+        "latency",
+        "look",
+        "mirror",
+        "parity",
+        "raid"
+      ]
+    },
+    {
+      "topic_id": "OS-U8-T1",
+      "unit_no": 8,
+      "unit_title": "Threads and inter-process communication",
+      "name": "Threads and inter-process communication",
+      "keywords": [
+        "address",
+        "context",
+        "kernel",
+        "memory",
+        "message",
+        "model",
+        "pcb",
+        "pipe"
+      ]
+    }
+  ]
+}

@@ -123,7 +123,8 @@ def test_health_loads_nothing(client, monkeypatch):
     monkeypatch.setattr(web, "GeminiLLM", forbidden("GeminiLLM"))
     r = client.get("/health")
     assert r.status_code == 200
-    assert r.json() == {"status": "ok", "scope": "local", "question_bank": True, "data_loaded": False, "answers_configured": False}
+    assert r.json() == {"status": "ok", "scope": "local", "question_bank": True, "data_loaded": False, "answers_configured": False,
+                           "offline_demo": False, "primary_source": "DDU"}
     monkeypatch.setattr(config, "GEMINI_API_KEY", SECRET)
     r = client.get("/health")
     assert r.json()["answers_configured"] is True and SECRET not in r.text   # a yes/no, never the key

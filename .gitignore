@@ -19,3 +19,4 @@ mlruns/
 mlflow.db
 mlartifacts/
 data/eval/
+demo/data/cache/

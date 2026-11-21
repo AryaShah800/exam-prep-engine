@@ -1,0 +1,134 @@
+{
+  "subject": "ML",
+  "subject_name": "Machine Learning",
+  "topics": [
+    {
+      "topic_id": "ML-U1-T1",
+      "unit_no": 1,
+      "unit_title": "Linear and logistic regression",
+      "name": "Linear and logistic regression",
+      "keywords": [
+        "coefficient",
+        "cost",
+        "descent",
+        "equation",
+        "gradient",
+        "hypothesis",
+        "l1",
+        "l2"
+      ]
+    },
+    {
+      "topic_id": "ML-U2-T1",
+      "unit_no": 2,
+      "unit_title": "Bias, variance and overfitting",
+      "name": "Bias, variance and overfitting",
+      "keywords": [
+        "bias",
+        "complexity",
+        "cross",
+        "data",
+        "dropout",
+        "early",
+        "fold",
+        "overfit"
+      ]
+    },
+    {
+      "topic_id": "ML-U3-T1",
+      "unit_no": 3,
+      "unit_title": "Decision trees and ensembles",
+      "name": "Decision trees and ensembles",
+      "keywords": [
+        "bagging",
+        "boosting",
+        "bootstrap",
+        "depth",
+        "ensemble",
+        "entropy",
+        "forest",
+        "gain"
+      ]
+    },
+    {
+      "topic_id": "ML-U4-T1",
+      "unit_no": 4,
+      "unit_title": "Support vector machines",
+      "name": "Support vector machines",
+      "keywords": [
+        "c",
+        "feature",
+        "hyperplane",
+        "kernel",
+        "margin",
+        "penalty",
+        "polynomial",
+        "rbf"
+      ]
+    },
+    {
+      "topic_id": "ML-U5-T1",
+      "unit_no": 5,
+      "unit_title": "Clustering",
+      "name": "Clustering",
+      "keywords": [
+        "assign",
+        "centroid",
+        "choose",
+        "cluster",
+        "converge",
+        "dbscan",
+        "dendrogram",
+        "density"
+      ]
+    },
+    {
+      "topic_id": "ML-U6-T1",
+      "unit_no": 6,
+      "unit_title": "Neural networks and backpropagation",
+      "name": "Neural networks and backpropagation",
+      "keywords": [
+        "activation",
+        "backprop",
+        "batch",
+        "chain",
+        "dropout",
+        "forward",
+        "gradient",
+        "momentum"
+      ]
+    },
+    {
+      "topic_id": "ML-U7-T1",
+      "unit_no": 7,
+      "unit_title": "Convolutional neural networks",
+      "name": "Convolutional neural networks",
+      "keywords": [
+        "augment",
+        "convolution",
+        "feature",
+        "filter",
+        "fine",
+        "imagenet",
+        "kernel",
+        "layer"
+      ]
+    },
+    {
+      "topic_id": "ML-U8-T1",
+      "unit_no": 8,
+      "unit_title": "Evaluation metrics",
+      "name": "Evaluation metrics",
+      "keywords": [
+        "accuracy",
+        "auc",
+        "confusion",
+        "curve",
+        "f1",
+        "false",
+        "imbalance",
+        "macro"
+      ]
+    }
+  ]
+}

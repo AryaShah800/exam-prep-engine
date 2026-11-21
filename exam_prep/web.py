@@ -14,7 +14,8 @@ Run from exam-prep-engine/:  uvicorn exam_prep.web:app --port 8000   (uvicorn bi
 Failures map to short fixed messages. Exception text (which can carry API responses) is never returned or logged:
 the log gets the exception type and the file:line it came from.
 """
-import logging, traceback
+import json, logging, traceback
+from html import escape as html_escape
 from contextlib import nullcontext
 from functools import lru_cache
 from pathlib import Path
@@ -81,6 +82,16 @@ def services() -> agent.Services:
                           chunks=lambda: all_chunks(), llm=lambda: get_llm())
 
 
+def bank_subjects() -> list[str]:
+    """Subject codes present in the question bank (read without building a retriever); the four DDU subjects if unreadable."""
+    try:
+        with config.EXPORT_FILE.open(encoding='utf-8') as f:
+            found = {json.loads(line)['subject'] for line in f if line.strip()}
+        return sorted(found if config.OFFLINE and found else found | {'AI', 'DC', 'MLDL', 'WT'})
+    except (OSError, ValueError, KeyError):
+        return ['AI', 'DC', 'MLDL', 'WT']
+
+
 def to_http_error(endpoint: str, exc: Exception) -> HTTPException:
     frame = traceback.extract_tb(exc.__traceback__)[-1] if exc.__traceback__ else None
     where = f'{Path(frame.filename).name}:{frame.lineno}' if frame else '?'
@@ -104,7 +115,9 @@ app.add_middleware(TrustedHostMiddleware, allowed_hosts=config.WEB_ALLOWED_HOSTS
 
 @app.get('/', response_class=HTMLResponse)
 def home():
-    return Path(__file__).with_name('web.html').read_text(encoding='utf-8')
+    html = Path(__file__).with_name('web.html').read_text(encoding='utf-8')
+    options = ''.join(f'<option>{html_escape(code)}</option>' for code in bank_subjects())
+    return html.replace('{{SUBJECTS}}', options).replace('{{PRIMARY}}', html_escape(config.PRIMARY_SOURCE))
 
 
 @app.get('/health')
@@ -112,7 +125,8 @@ def health():
     return {'status': 'ok', 'scope': 'local',
             'question_bank': config.EXPORT_FILE.exists(),
             'data_loaded': bool(get_retriever.cache_info().currsize),
-            'answers_configured': bool(config.GEMINI_API_KEY)}
+            'answers_configured': bool(config.GEMINI_API_KEY) and not config.OFFLINE,
+            'offline_demo': config.OFFLINE, 'primary_source': config.PRIMARY_SOURCE}
 
 
 @app.post('/search')
@@ -127,6 +141,8 @@ def search(request: SearchRequest):
 
 @app.post('/ask')
 def ask(request: SearchRequest):
+    if config.OFFLINE:
+        raise HTTPException(503, 'Cited answers need a language model; this demo runs without one. Search still works.')
     try:
         with llm_lock:
             llm = get_llm()   # fail fast on a missing key before loading the question bank
