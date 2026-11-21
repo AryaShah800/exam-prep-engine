@@ -2,6 +2,22 @@
 
 Hybrid-retrieval study tool over university past papers (DDU Nadiad, B.Tech IT, Semester 7). It finds the exact paper and question for a topic, writes answers whose citations are validated in code, generates practice questions and grades student answers against a rubric.
 
+## Try it now (no API key, no private data)
+
+The repository ships a **synthetic sample bank**: 120 exam-style questions over three subjects (Operating Systems, Databases, Machine Learning), written for this project, not taken from any university paper. The demo runs entirely offline.
+
+```powershell
+python -m venv .venv; .venv\Scriptsctivate
+pip install -r requirements-web.txt
+python -m exam_prep demo          # http://127.0.0.1:8000
+```
+
+| Search with per-ranker ranks | Practice question + marking scheme + marked answer | Topic history |
+| --- | --- | --- |
+| ![search](docs/ui-search.png) | ![practice](docs/ui-practice.png) | ![history](docs/ui-history.png) |
+
+In demo mode practice questions come from the sample bank and answers are marked by a **keyword-coverage grader** (`exam_prep/offline.py`), not an LLM: it counts expected terms, so it can be gamed by keyword stuffing and it does not check correctness. It has not been compared with human graders. Cited answers need an LLM and are disabled. Rebuild the bank with `python scripts/build_sample_corpus.py`; the browser flows are tested by `pytest tests/test_ui_e2e.py` (needs `pip install playwright` and Microsoft Edge).
+
 ## Status and what is verified
 
 | Item | State |

@@ -109,10 +109,10 @@ def history_status(subject: str, years: list[int]) -> tuple[str, str]:
     if len(years) < MIN_YEARS_FOR_BACKTEST:
         span = ", ".join(map(str, years)) or "none"
         return "insufficient_history", (
-            f"Only {len(years)} year of DDU {subject} papers ({span}). That is not enough history to train or backtest "
+            f"Only {len(years)} year of {config.PRIMARY_SOURCE} {subject} papers ({span}). That is not enough history to train or backtest "
             f"a topic predictor, so these are counts of what was asked, not a forecast of the next exam.")
     return "not_backtested", (
-        f"{len(years)} years of DDU {subject} papers. No trained predictor or time-based backtest exists yet, so these "
+        f"{len(years)} years of {config.PRIMARY_SOURCE} {subject} papers. No trained predictor or time-based backtest exists yet, so these "
         f"are historical counts, not a validated forecast.")
 
 
