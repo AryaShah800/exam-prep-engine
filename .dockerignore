@@ -7,3 +7,8 @@
 !exam_prep/**
 **/__pycache__/
 **/*.pyc
+# Hosted demo (deploy/demo/Dockerfile): the synthetic sample bank and its warm-up script only.
+!demo/
+!demo/**
+!deploy/demo/warmup.py
+demo/data/cache/

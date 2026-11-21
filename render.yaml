@@ -1,0 +1,12 @@
+# Render Blueprint: the offline demo only (synthetic sample bank, no LLM, no API keys).
+services:
+  - type: web
+    name: exam-prep-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./deploy/demo/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: WEB_ALLOWED_HOSTS
+        value: exam-prep-demo.onrender.com

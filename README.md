@@ -4,6 +4,8 @@ Hybrid-retrieval study tool over university past papers (DDU Nadiad, B.Tech IT, 
 
 ## Try it now (no API key, no private data)
 
+**Live demo: https://exam-prep-demo.onrender.com** (Render free tier: the first visit after about 15 idle minutes takes up to a minute while the instance wakes up). It serves the synthetic sample bank below with BM25, hybrid and semantic search and keyword-coverage marking. To fit the free instance's 512 MB the hosted demo embeds with `BAAI/bge-small-en-v1.5` (peak about 300 MB in the build-time warm-up, against about 650 MB for `bge-base`); the evaluations in this README used `bge-base`. Config: `render.yaml`, `deploy/demo/Dockerfile`.
+
 ![Demo: search, practice, marked answer, topic history](docs/demo.gif)
 
 Recorded from the offline sample-bank demo (`python scripts/record_demo_gif.py`).
@@ -55,7 +57,7 @@ flowchart LR
 | Answer faithfulness | **94.1% mean RAGAS faithfulness** on 40 answers; all 40 passed the code-level citation check |
 | Practice questions, rubric grading, tool router | Implemented and unit-tested with synthetic data and fake LLMs. **No accuracy figure**: grading has not been compared with human graders |
 | Topic prediction | Not offered. Only one year of DDU papers exists, so `/predict` returns descriptive topic counts and `insufficient_history` |
-| Deployment, student usage | None. The app runs locally. No pilot has been run and no user count is claimed |
+| Deployment, student usage | Offline sample-bank demo hosted on Render (no papers, no LLM). The full pipeline runs locally. No pilot has been run and no user count is claimed |
 
 Caveats on the numbers:
 
