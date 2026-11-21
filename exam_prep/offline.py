@@ -16,13 +16,15 @@ from typing import Optional
 
 from . import config
 from .intelligence import NotEnoughData, RubricPoint, topic_names
-from .retrieval import Filters, Hit, tokenize
+from .retrieval import STOPWORDS, Filters, Hit, tokenize
 
 OFFLINE_PRACTICE_NOTICE = ("Practice question chosen from the bundled synthetic sample bank (written for this demo, "
                            "not from any university paper). The rubric is authored per topic.")
 OFFLINE_GRADING_NOTICE = ("Keyword-coverage grading: counts how many expected terms your answer uses. It does not check "
                           "correctness and has not been validated against human graders.")
 MIN_ANSWER_WORDS = 15
+PUNCT = ".,;:!?()[]'\""
+MIN_FUNCTION_WORD_SHARE = 0.12   # prose has "the", "of", "is"...; a bare keyword list almost never does
 
 
 def load_rubrics(path: Optional[Path] = None) -> dict:
@@ -85,7 +87,9 @@ class OfflinePoint:
 def grade_keywords(rubric: list[RubricPoint], answer: str, keyword_lists: Optional[list[list[str]]] = None) -> dict:
     """Score `answer` against `rubric`. keyword_lists overrides the lookup (used by the validation script)."""
     rubrics = load_rubrics()
-    words = len(answer.split())
+    raw_words = [w.strip(PUNCT).lower() for w in answer.split()]
+    words = len(raw_words)
+    prose = words and sum(w in STOPWORDS for w in raw_words) / words >= MIN_FUNCTION_WORD_SHARE
     answer_stems = _stems(answer)
     points = []
     for i, point in enumerate(rubric, 1):
@@ -94,8 +98,8 @@ def grade_keywords(rubric: list[RubricPoint], answer: str, keyword_lists: Option
         need = max(2, math.ceil(0.4 * len(wanted))) if wanted else 1
         found = [w for w in wanted if w in answer_stems]
         share = 0.0 if not wanted else min(1.0, len(found) / need)
-        if words < MIN_ANSWER_WORDS:
-            share = min(share, 0.5)    # a bare list of terms is not an answer
+        if words < MIN_ANSWER_WORDS or not prose:
+            share = min(share, 0.5)    # a short answer or a bare list of terms is not an answer
         score = round(point.marks * share, 2)
         missing = [w for w in wanted if w not in answer_stems][:4]
         feedback = (f"Used {len(found)} of {len(wanted)} expected terms." +
@@ -103,7 +107,7 @@ def grade_keywords(rubric: list[RubricPoint], answer: str, keyword_lists: Option
         points.append(OfflinePoint(i, point.criterion, point.marks, score, feedback))
     total = round(sum(p.score for p in points), 2)
     max_total = round(sum(p.marks for p in rubric), 2)
-    overall = ("Short answer: add full sentences, not just terms." if words < MIN_ANSWER_WORDS else
+    overall = ("Short answer or a bare list of terms: write full sentences." if words < MIN_ANSWER_WORDS or not prose else
                "Covers most expected ideas." if total >= 0.75 * max_total else
                "Some expected ideas are missing; compare with the rubric points below.")
     return {"points": [asdict(p) for p in points], "total": total, "max_total": max_total, "overall_feedback": overall,

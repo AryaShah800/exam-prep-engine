@@ -27,6 +27,11 @@ def test_bare_keyword_list_is_capped_at_half_marks():
     assert "full sentences" in g["overall_feedback"]
 
 
+def test_long_keyword_list_without_prose_is_capped_too():
+    g = offline.grade_keywords(RUBRIC, " ".join(KEYWORDS[0] + KEYWORDS[1]) * 3, KEYWORDS)
+    assert g["total"] <= 3.0
+
+
 def test_partial_answer_is_between_zero_and_full():
     g = offline.grade_keywords(RUBRIC, "A deadlock occurs when there is mutual exclusion and a circular wait between several processes.", KEYWORDS)
     assert 0 < g["total"] < 6

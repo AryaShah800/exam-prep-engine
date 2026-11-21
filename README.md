@@ -294,3 +294,7 @@ Honesty rules for these numbers:
 ## What Phase A gives the resume
 
 Run `python -m exam_prep stats` and use the real numbers only: DDU papers, questions, subjects, and the tag accuracy from your review report. `external_*` numbers describe the practice bank and must not be added to the DDU paper count.
+
+## Grader sanity check (synthetic)
+
+`python scripts/grader_synthetic_check.py` builds answers of controlled quality from the sample rubrics and grades them with the keyword grader (`reports/grader_synthetic_check.json`). It checks ordering (full > partial > off-topic held for all 24 topics) and exposes weaknesses: a bare keyword list used to earn 100% and is now capped at 50% (prose detection by function-word share). Answers are built from the grader's own keyword lists, so this is not agreement with human graders.
