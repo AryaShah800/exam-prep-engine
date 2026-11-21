@@ -28,6 +28,10 @@ def set_root(root: Path) -> None:
 
 set_root(Path(os.getenv("EXAM_PREP_ROOT", Path(__file__).resolve().parent.parent)))
 
+# Demo mode: the bundled synthetic sample bank, no LLM. Topic history counts questions whose source is PRIMARY_SOURCE.
+OFFLINE = os.getenv("EXAM_PREP_OFFLINE", "").lower() in ("1", "true", "yes")
+PRIMARY_SOURCE = os.getenv("EXAM_PREP_PRIMARY_SOURCE", "DDU")
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
 # Text work (splitting, tagging): a Flash-Lite model has the most generous free-tier limits.
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")

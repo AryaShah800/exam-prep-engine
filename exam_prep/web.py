@@ -112,7 +112,8 @@ def health():
     return {'status': 'ok', 'scope': 'local',
             'question_bank': config.EXPORT_FILE.exists(),
             'data_loaded': bool(get_retriever.cache_info().currsize),
-            'answers_configured': bool(config.GEMINI_API_KEY)}
+            'answers_configured': bool(config.GEMINI_API_KEY) and not config.OFFLINE,
+            'offline_demo': config.OFFLINE, 'primary_source': config.PRIMARY_SOURCE}
 
 
 @app.post('/search')
@@ -127,6 +128,8 @@ def search(request: SearchRequest):
 
 @app.post('/ask')
 def ask(request: SearchRequest):
+    if config.OFFLINE:
+        raise HTTPException(503, 'Cited answers need a language model; this demo runs without one. Search still works.')
     try:
         with llm_lock:
             llm = get_llm()   # fail fast on a missing key before loading the question bank

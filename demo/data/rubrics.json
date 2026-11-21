@@ -1,0 +1,877 @@
+{
+  "OS-U1-T1": [
+    {
+      "criterion": "Defines the scheduling algorithms and how each picks the next process",
+      "marks": 3,
+      "keywords": [
+        "fcfs",
+        "first",
+        "shortest",
+        "round",
+        "robin",
+        "quantum",
+        "queue"
+      ]
+    },
+    {
+      "criterion": "Evaluates with waiting time, turnaround time or response time",
+      "marks": 3,
+      "keywords": [
+        "waiting",
+        "turnaround",
+        "response",
+        "throughput"
+      ]
+    },
+    {
+      "criterion": "Mentions preemption, starvation or aging trade-offs",
+      "marks": 2,
+      "keywords": [
+        "preempt",
+        "starvation",
+        "aging",
+        "convoy"
+      ]
+    }
+  ],
+  "OS-U2-T1": [
+    {
+      "criterion": "Names mutual exclusion, hold and wait, no preemption and circular wait",
+      "marks": 3,
+      "keywords": [
+        "mutual",
+        "exclusion",
+        "hold",
+        "wait",
+        "preemption",
+        "circular"
+      ]
+    },
+    {
+      "criterion": "Explains avoidance with safe state or the Banker's algorithm",
+      "marks": 3,
+      "keywords": [
+        "safe",
+        "banker",
+        "available",
+        "allocation",
+        "need",
+        "max"
+      ]
+    },
+    {
+      "criterion": "Describes detection, recovery or the resource allocation graph",
+      "marks": 2,
+      "keywords": [
+        "graph",
+        "cycle",
+        "detect",
+        "recover",
+        "terminate",
+        "rollback"
+      ]
+    }
+  ],
+  "OS-U3-T1": [
+    {
+      "criterion": "Explains page, frame and page table address translation",
+      "marks": 3,
+      "keywords": [
+        "page",
+        "frame",
+        "table",
+        "logical",
+        "physical",
+        "offset"
+      ]
+    },
+    {
+      "criterion": "Discusses fragmentation (internal and external)",
+      "marks": 3,
+      "keywords": [
+        "fragment",
+        "internal",
+        "external",
+        "hole",
+        "compaction"
+      ]
+    },
+    {
+      "criterion": "Covers TLB, segmentation or placement strategies",
+      "marks": 2,
+      "keywords": [
+        "tlb",
+        "lookaside",
+        "segment",
+        "first",
+        "best",
+        "worst"
+      ]
+    }
+  ],
+  "OS-U4-T1": [
+    {
+      "criterion": "Describes demand paging and the page fault handling steps",
+      "marks": 3,
+      "keywords": [
+        "demand",
+        "fault",
+        "trap",
+        "disk",
+        "valid",
+        "bit"
+      ]
+    },
+    {
+      "criterion": "Applies or compares replacement algorithms",
+      "marks": 3,
+      "keywords": [
+        "fifo",
+        "lru",
+        "optimal",
+        "reference",
+        "string",
+        "replace"
+      ]
+    },
+    {
+      "criterion": "Explains thrashing, working set or Belady's anomaly",
+      "marks": 2,
+      "keywords": [
+        "thrash",
+        "working",
+        "set",
+        "belady",
+        "anomaly"
+      ]
+    }
+  ],
+  "OS-U5-T1": [
+    {
+      "criterion": "States mutual exclusion, progress and bounded waiting",
+      "marks": 3,
+      "keywords": [
+        "mutual",
+        "exclusion",
+        "progress",
+        "bounded",
+        "critical",
+        "section"
+      ]
+    },
+    {
+      "criterion": "Uses semaphores, wait and signal operations or monitors",
+      "marks": 3,
+      "keywords": [
+        "semaphore",
+        "wait",
+        "signal",
+        "monitor",
+        "mutex",
+        "condition"
+      ]
+    },
+    {
+      "criterion": "Handles a classic problem (producer consumer, philosophers, readers writers)",
+      "marks": 2,
+      "keywords": [
+        "producer",
+        "consumer",
+        "philosopher",
+        "buffer",
+        "reader",
+        "writer"
+      ]
+    }
+  ],
+  "OS-U6-T1": [
+    {
+      "criterion": "Explains allocation methods and their trade-offs",
+      "marks": 3,
+      "keywords": [
+        "contiguous",
+        "linked",
+        "indexed",
+        "block",
+        "allocation"
+      ]
+    },
+    {
+      "criterion": "Describes inodes, directories or free space management",
+      "marks": 3,
+      "keywords": [
+        "inode",
+        "directory",
+        "bitmap",
+        "bit",
+        "vector",
+        "free"
+      ]
+    },
+    {
+      "criterion": "Mentions access control or permissions",
+      "marks": 2,
+      "keywords": [
+        "access",
+        "control",
+        "permission",
+        "acl",
+        "protect"
+      ]
+    }
+  ],
+  "OS-U7-T1": [
+    {
+      "criterion": "Explains or applies the scheduling algorithms (FCFS, SSTF, SCAN, C-SCAN)",
+      "marks": 3,
+      "keywords": [
+        "fcfs",
+        "sstf",
+        "scan",
+        "look",
+        "head",
+        "cylinder"
+      ]
+    },
+    {
+      "criterion": "Explains disk timing components",
+      "marks": 3,
+      "keywords": [
+        "seek",
+        "rotational",
+        "latency",
+        "transfer",
+        "track"
+      ]
+    },
+    {
+      "criterion": "Discusses starvation, fairness or RAID redundancy",
+      "marks": 2,
+      "keywords": [
+        "starvation",
+        "raid",
+        "mirror",
+        "parity",
+        "stripe"
+      ]
+    }
+  ],
+  "OS-U8-T1": [
+    {
+      "criterion": "Distinguishes process from thread (resources shared and not shared)",
+      "marks": 3,
+      "keywords": [
+        "process",
+        "thread",
+        "stack",
+        "register",
+        "address",
+        "space"
+      ]
+    },
+    {
+      "criterion": "Explains threading models or context switching",
+      "marks": 3,
+      "keywords": [
+        "model",
+        "kernel",
+        "user",
+        "context",
+        "switch",
+        "pcb"
+      ]
+    },
+    {
+      "criterion": "Describes IPC (shared memory, message passing, pipes)",
+      "marks": 2,
+      "keywords": [
+        "message",
+        "shared",
+        "memory",
+        "pipe",
+        "socket"
+      ]
+    }
+  ],
+  "DB-U1-T1": [
+    {
+      "criterion": "Defines functional dependencies and the normal forms (1NF, 2NF, 3NF, BCNF)",
+      "marks": 3,
+      "keywords": [
+        "functional",
+        "dependency",
+        "1nf",
+        "2nf",
+        "3nf",
+        "bcnf",
+        "normal"
+      ]
+    },
+    {
+      "criterion": "Identifies keys, partial or transitive dependencies",
+      "marks": 3,
+      "keywords": [
+        "key",
+        "candidate",
+        "partial",
+        "transitive",
+        "prime"
+      ]
+    },
+    {
+      "criterion": "Explains anomalies or lossless decomposition",
+      "marks": 2,
+      "keywords": [
+        "anomaly",
+        "anomalies",
+        "lossless",
+        "decomposition",
+        "redundancy"
+      ]
+    }
+  ],
+  "DB-U2-T1": [
+    {
+      "criterion": "Explains atomicity, consistency, isolation and durability",
+      "marks": 3,
+      "keywords": [
+        "atomic",
+        "consistency",
+        "isolation",
+        "durability",
+        "acid"
+      ]
+    },
+    {
+      "criterion": "Describes schedules, serializability or the precedence graph",
+      "marks": 3,
+      "keywords": [
+        "schedule",
+        "serial",
+        "serializable",
+        "conflict",
+        "precedence",
+        "graph"
+      ]
+    },
+    {
+      "criterion": "Covers transaction states, commit, abort or recoverability",
+      "marks": 2,
+      "keywords": [
+        "commit",
+        "abort",
+        "rollback",
+        "recoverable",
+        "cascade",
+        "state"
+      ]
+    }
+  ],
+  "DB-U3-T1": [
+    {
+      "criterion": "Explains locking (shared, exclusive) and two-phase locking",
+      "marks": 3,
+      "keywords": [
+        "lock",
+        "shared",
+        "exclusive",
+        "two-phase",
+        "growing",
+        "shrinking"
+      ]
+    },
+    {
+      "criterion": "Explains timestamp ordering or optimistic validation",
+      "marks": 3,
+      "keywords": [
+        "timestamp",
+        "optimistic",
+        "validation",
+        "read",
+        "write",
+        "rule"
+      ]
+    },
+    {
+      "criterion": "Handles deadlock or wait-for graph",
+      "marks": 2,
+      "keywords": [
+        "deadlock",
+        "wait-for",
+        "graph",
+        "victim"
+      ]
+    }
+  ],
+  "DB-U4-T1": [
+    {
+      "criterion": "Describes B+ tree nodes, leaves and balancing",
+      "marks": 3,
+      "keywords": [
+        "tree",
+        "leaf",
+        "node",
+        "split",
+        "balanced",
+        "order"
+      ]
+    },
+    {
+      "criterion": "Distinguishes index types (primary, clustered, secondary, dense, sparse)",
+      "marks": 3,
+      "keywords": [
+        "primary",
+        "clustering",
+        "secondary",
+        "dense",
+        "sparse"
+      ]
+    },
+    {
+      "criterion": "Mentions hashing or range query efficiency",
+      "marks": 2,
+      "keywords": [
+        "hash",
+        "bucket",
+        "range",
+        "search"
+      ]
+    }
+  ],
+  "DB-U5-T1": [
+    {
+      "criterion": "Writes correct join syntax and explains join types",
+      "marks": 3,
+      "keywords": [
+        "join",
+        "inner",
+        "outer",
+        "left",
+        "self",
+        "on"
+      ]
+    },
+    {
+      "criterion": "Uses grouping, aggregates or HAVING",
+      "marks": 3,
+      "keywords": [
+        "group",
+        "having",
+        "count",
+        "avg",
+        "sum",
+        "aggregate"
+      ]
+    },
+    {
+      "criterion": "Uses subqueries or set operations",
+      "marks": 2,
+      "keywords": [
+        "subquery",
+        "correlated",
+        "union",
+        "intersect",
+        "except",
+        "exists"
+      ]
+    }
+  ],
+  "DB-U6-T1": [
+    {
+      "criterion": "Identifies entities, attributes and relationships",
+      "marks": 3,
+      "keywords": [
+        "entity",
+        "attribute",
+        "relationship",
+        "key",
+        "diagram"
+      ]
+    },
+    {
+      "criterion": "Explains cardinality, participation or weak entities",
+      "marks": 3,
+      "keywords": [
+        "cardinality",
+        "participation",
+        "weak",
+        "total",
+        "many"
+      ]
+    },
+    {
+      "criterion": "Maps the model to relational tables",
+      "marks": 2,
+      "keywords": [
+        "table",
+        "relation",
+        "foreign",
+        "primary",
+        "convert",
+        "map"
+      ]
+    }
+  ],
+  "DB-U7-T1": [
+    {
+      "criterion": "Lists parsing, optimization and execution stages",
+      "marks": 3,
+      "keywords": [
+        "parse",
+        "optimiz",
+        "plan",
+        "execution",
+        "translate"
+      ]
+    },
+    {
+      "criterion": "Applies heuristic rules or an expression tree",
+      "marks": 3,
+      "keywords": [
+        "selection",
+        "projection",
+        "push",
+        "tree",
+        "heuristic",
+        "algebra"
+      ]
+    },
+    {
+      "criterion": "Compares join algorithms and cost estimation",
+      "marks": 2,
+      "keywords": [
+        "nested",
+        "merge",
+        "hash",
+        "cost",
+        "statistics"
+      ]
+    }
+  ],
+  "DB-U8-T1": [
+    {
+      "criterion": "Explains the log, write-ahead logging, undo and redo",
+      "marks": 3,
+      "keywords": [
+        "log",
+        "write-ahead",
+        "undo",
+        "redo",
+        "record"
+      ]
+    },
+    {
+      "criterion": "Describes checkpoints or recovery phases",
+      "marks": 3,
+      "keywords": [
+        "checkpoint",
+        "analysis",
+        "aries",
+        "phase",
+        "crash"
+      ]
+    },
+    {
+      "criterion": "Compares update strategies or shadow paging",
+      "marks": 2,
+      "keywords": [
+        "deferred",
+        "immediate",
+        "shadow",
+        "page",
+        "buffer"
+      ]
+    }
+  ],
+  "ML-U1-T1": [
+    {
+      "criterion": "Defines the model, hypothesis and cost function",
+      "marks": 3,
+      "keywords": [
+        "hypothesis",
+        "cost",
+        "loss",
+        "squared",
+        "sigmoid",
+        "likelihood"
+      ]
+    },
+    {
+      "criterion": "Explains optimization by gradient descent or the normal equation",
+      "marks": 3,
+      "keywords": [
+        "gradient",
+        "descent",
+        "normal",
+        "equation",
+        "learning",
+        "rate"
+      ]
+    },
+    {
+      "criterion": "Covers regularization or interpretation",
+      "marks": 2,
+      "keywords": [
+        "regulariz",
+        "l1",
+        "l2",
+        "ridge",
+        "lasso",
+        "coefficient"
+      ]
+    }
+  ],
+  "ML-U2-T1": [
+    {
+      "criterion": "Explains bias and variance and their trade-off",
+      "marks": 3,
+      "keywords": [
+        "bias",
+        "variance",
+        "trade-off",
+        "complexity",
+        "underfit"
+      ]
+    },
+    {
+      "criterion": "Describes overfitting and remedies",
+      "marks": 3,
+      "keywords": [
+        "overfit",
+        "regulariz",
+        "dropout",
+        "data",
+        "early",
+        "stopping"
+      ]
+    },
+    {
+      "criterion": "Covers validation, cross validation or test data",
+      "marks": 2,
+      "keywords": [
+        "validation",
+        "cross",
+        "fold",
+        "test",
+        "split"
+      ]
+    }
+  ],
+  "ML-U3-T1": [
+    {
+      "criterion": "Explains split criteria (entropy, information gain, Gini)",
+      "marks": 3,
+      "keywords": [
+        "entropy",
+        "information",
+        "gain",
+        "gini",
+        "split",
+        "impurity"
+      ]
+    },
+    {
+      "criterion": "Explains ensembles (bagging, boosting, random forest)",
+      "marks": 3,
+      "keywords": [
+        "bagging",
+        "boosting",
+        "forest",
+        "ensemble",
+        "bootstrap",
+        "weak"
+      ]
+    },
+    {
+      "criterion": "Mentions pruning, depth or variance reduction",
+      "marks": 2,
+      "keywords": [
+        "prun",
+        "depth",
+        "variance",
+        "overfit"
+      ]
+    }
+  ],
+  "ML-U4-T1": [
+    {
+      "criterion": "Explains margin and support vectors",
+      "marks": 3,
+      "keywords": [
+        "margin",
+        "support",
+        "vector",
+        "hyperplane",
+        "separat"
+      ]
+    },
+    {
+      "criterion": "Explains kernels",
+      "marks": 3,
+      "keywords": [
+        "kernel",
+        "rbf",
+        "polynomial",
+        "feature",
+        "space",
+        "trick"
+      ]
+    },
+    {
+      "criterion": "Discusses soft margin or the parameter C",
+      "marks": 2,
+      "keywords": [
+        "soft",
+        "slack",
+        "regulariz",
+        "penalty",
+        "c"
+      ]
+    }
+  ],
+  "ML-U5-T1": [
+    {
+      "criterion": "Explains the iterative assignment and centroid update steps",
+      "marks": 3,
+      "keywords": [
+        "centroid",
+        "assign",
+        "iterat",
+        "mean",
+        "cluster",
+        "converge"
+      ]
+    },
+    {
+      "criterion": "Compares clustering methods (k-means, hierarchical, DBSCAN)",
+      "marks": 3,
+      "keywords": [
+        "hierarchical",
+        "dendrogram",
+        "dbscan",
+        "density",
+        "epsilon",
+        "linkage"
+      ]
+    },
+    {
+      "criterion": "Discusses evaluation or choosing k",
+      "marks": 2,
+      "keywords": [
+        "elbow",
+        "silhouette",
+        "inertia",
+        "choose"
+      ]
+    }
+  ],
+  "ML-U6-T1": [
+    {
+      "criterion": "Explains forward pass, loss and chain rule backpropagation",
+      "marks": 3,
+      "keywords": [
+        "forward",
+        "backprop",
+        "chain",
+        "rule",
+        "gradient",
+        "weight"
+      ]
+    },
+    {
+      "criterion": "Compares activation functions or gradient problems",
+      "marks": 3,
+      "keywords": [
+        "sigmoid",
+        "tanh",
+        "relu",
+        "vanishing",
+        "activation"
+      ]
+    },
+    {
+      "criterion": "Mentions optimizers or regularization (batch, dropout, normalization)",
+      "marks": 2,
+      "keywords": [
+        "batch",
+        "dropout",
+        "normaliz",
+        "stochastic",
+        "momentum"
+      ]
+    }
+  ],
+  "ML-U7-T1": [
+    {
+      "criterion": "Explains convolution, filters, stride, padding and pooling",
+      "marks": 3,
+      "keywords": [
+        "convolution",
+        "filter",
+        "kernel",
+        "stride",
+        "padding",
+        "pool"
+      ]
+    },
+    {
+      "criterion": "Explains weight sharing, receptive fields or architecture",
+      "marks": 3,
+      "keywords": [
+        "weight",
+        "sharing",
+        "receptive",
+        "layer",
+        "feature",
+        "map"
+      ]
+    },
+    {
+      "criterion": "Covers transfer learning or augmentation",
+      "marks": 2,
+      "keywords": [
+        "transfer",
+        "pretrained",
+        "fine",
+        "augment",
+        "imagenet"
+      ]
+    }
+  ],
+  "ML-U8-T1": [
+    {
+      "criterion": "Defines precision, recall, F1 via true and false positives",
+      "marks": 3,
+      "keywords": [
+        "precision",
+        "recall",
+        "f1",
+        "true",
+        "false",
+        "positive"
+      ]
+    },
+    {
+      "criterion": "Explains the confusion matrix, ROC or AUC",
+      "marks": 3,
+      "keywords": [
+        "confusion",
+        "matrix",
+        "roc",
+        "auc",
+        "curve"
+      ]
+    },
+    {
+      "criterion": "Discusses imbalance, thresholds or averaging",
+      "marks": 2,
+      "keywords": [
+        "imbalance",
+        "threshold",
+        "macro",
+        "micro",
+        "accuracy"
+      ]
+    }
+  ]
+}

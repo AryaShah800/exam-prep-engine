@@ -121,7 +121,7 @@ def topic_frequency(chunks: Iterable[Chunk], subject: str, exam_type: Optional[s
     subject = subject.upper()
     exam_type = exam_type.lower() if exam_type else None
     in_scope = [c for c in chunks if c.subject == subject and (exam_type is None or c.exam_type == exam_type)]
-    ddu = [c for c in in_scope if c.source == "DDU"]
+    ddu = [c for c in in_scope if c.source == config.PRIMARY_SOURCE]
     if not ddu:
         scope = f" {exam_type}-semester" if exam_type else ""
         raise NotEnoughData(f"No DDU{scope} questions for {subject} in the question bank.")
@@ -162,7 +162,7 @@ def predict_topics(chunks: Iterable[Chunk], subject: str, method: Literal["frequ
     if method == "frequency":
         return topic_frequency(chunks, subject, exam_type, top_n)
     subject = subject.upper()
-    years = sorted({c.year for c in chunks if c.subject == subject and c.source == "DDU"})
+    years = sorted({c.year for c in chunks if c.subject == subject and c.source == config.PRIMARY_SOURCE})
     if not years:
         raise NotEnoughData(f"No DDU questions for {subject} in the question bank.")
     if len(years) < MIN_YEARS_FOR_BACKTEST:
