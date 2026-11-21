@@ -298,3 +298,15 @@ Run `python -m exam_prep stats` and use the real numbers only: DDU papers, quest
 ## Grader sanity check (synthetic)
 
 `python scripts/grader_synthetic_check.py` builds answers of controlled quality from the sample rubrics and grades them with the keyword grader (`reports/grader_synthetic_check.json`). It checks ordering (full > partial > off-topic held for all 24 topics) and exposes weaknesses: a bare keyword list used to earn 100% and is now capped at 50% (prose detection by function-word share). Answers are built from the grader's own keyword lists, so this is not agreement with human graders.
+
+## Paraphrase-only retrieval check (synthetic bank)
+
+`python scripts/eval_sample.py` (needs `pip install -r requirements.txt`; downloads the local bge-base model once) scores 48 hand-written paraphrase queries (two per topic, written to avoid the bank's wording; mean query-word overlap with relevant questions 0.126) against the 120 sample questions; relevance = same topic. Report: `demo/reports/retrieval_eval_sample_paraphrase_bge-base-en-v1-5.md`.
+
+| Ranker | Recall@5 | Hit@5 | MRR@10 | nDCG@10 |
+| --- | --- | --- | --- | --- |
+| BM25 | 0.208 | 0.542 | 0.397 | 0.245 |
+| Dense (bge-base) | 0.454 | 0.917 | 0.714 | 0.609 |
+| Hybrid (RRF) | 0.417 | 0.875 | 0.736 | 0.597 |
+
+When queries share little vocabulary with the questions, keyword search collapses and embeddings carry most of the signal; hybrid is not better than dense here. This contrasts with the AI-written golden set above, where BM25 is already near saturation. Single run on a small synthetic bank by one author (no confidence intervals computed in this table); it says nothing about real papers.
