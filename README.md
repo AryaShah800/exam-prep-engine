@@ -7,7 +7,7 @@ Hybrid-retrieval study tool over university past papers (DDU Nadiad, B.Tech IT, 
 The repository ships a **synthetic sample bank**: 120 exam-style questions over three subjects (Operating Systems, Databases, Machine Learning), written for this project, not taken from any university paper. The demo runs entirely offline.
 
 ```powershell
-python -m venv .venv; .venvScriptsctivate
+python -m venv .venv; .venv\Scripts\activate
 pip install -r requirements-web.txt
 python -m exam_prep demo          # http://127.0.0.1:8000
 ```
