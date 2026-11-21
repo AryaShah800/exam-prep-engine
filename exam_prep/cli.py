@@ -1,5 +1,5 @@
 """Command line for Phases A and B. Run `python -m exam_prep --help`."""
-import argparse, sys
+import argparse, os, sys
 from typing import Optional
 from . import config, export, extract, review, split, syllabus, tag
 from .llm import GeminiLLM, LLMError
@@ -86,7 +86,7 @@ def _evaluate(args) -> None:
     print(f"  report: {evaluate.save(golden, version, results, emb.model)}  ({emb.api_calls} new embedding calls)")
 
 
-def _demo(port: int) -> None:
+def _demo(port: int, host: str = "127.0.0.1") -> None:
     from pathlib import Path
     sample = Path(__file__).resolve().parent.parent / "demo"
     if not (sample / "data" / "processed" / "questions_tagged.jsonl").exists():
@@ -96,8 +96,8 @@ def _demo(port: int) -> None:
     config.PRIMARY_SOURCE = "SAMPLE"
     import uvicorn
     from .web import app
-    print(f"Demo on http://127.0.0.1:{port}  (synthetic sample questions; keyword practice and grading, no LLM)")
-    uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")
+    print(f"Demo on http://{host}:{port}  (synthetic sample questions; keyword practice and grading, no LLM)")
+    uvicorn.run(app, host=host, port=port, log_level="warning")
 
 
 def main(argv: Optional[list[str]] = None) -> int:
@@ -172,12 +172,13 @@ def main(argv: Optional[list[str]] = None) -> int:
     a.add_argument("--subject")
 
     d = sub.add_parser("demo", help="serve the UI on the bundled synthetic sample bank (no API key, no private data)")
-    d.add_argument("--port", type=int, default=8000)
+    d.add_argument("--port", type=int, default=int(os.getenv("PORT", "8000")))
+    d.add_argument("--host", default="127.0.0.1", help="use 0.0.0.0 only inside a container; allowed Host headers come from WEB_ALLOWED_HOSTS")
 
     args = p.parse_args(argv)
     try:
         if args.cmd == "demo":
-            _demo(args.port)
+            _demo(args.port, args.host)
         elif args.cmd == "extract":
             metas = discover_papers(subject=args.subject, source=args.source)
             print(f"Extracting {len(metas)} papers")
