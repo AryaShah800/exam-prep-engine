@@ -4,6 +4,10 @@ Hybrid-retrieval study tool over university past papers (DDU Nadiad, B.Tech IT, 
 
 ## Try it now (no API key, no private data)
 
+![Demo: search, practice, marked answer, topic history](docs/demo.gif)
+
+Recorded from the offline sample-bank demo (`python scripts/record_demo_gif.py`).
+
 The repository ships a **synthetic sample bank**: 120 exam-style questions over three subjects (Operating Systems, Databases, Machine Learning), written for this project, not taken from any university paper. The demo runs entirely offline.
 
 ```powershell
@@ -17,6 +21,30 @@ python -m exam_prep demo          # http://127.0.0.1:8000
 | ![search](docs/ui-search.png) | ![practice](docs/ui-practice.png) | ![history](docs/ui-history.png) |
 
 In demo mode practice questions come from the sample bank and answers are marked by a **keyword-coverage grader** (`exam_prep/offline.py`), not an LLM: it counts expected terms, so it can be gamed by keyword stuffing and it does not check correctness. It has not been compared with human graders. Cited answers need an LLM and are disabled. Rebuild the bank with `python scripts/build_sample_corpus.py`; the browser flows are tested by `pytest tests/test_ui_e2e.py` (needs `pip install playwright` and Microsoft Edge).
+
+## Architecture
+
+```mermaid
+flowchart LR
+    subgraph Ingest["Ingest (offline, needs your PDFs)"]
+        P[Past papers] --> X[extract.py / split.py / tag.py]
+    end
+    X --> Q[(Tagged questions<br/>one chunk per question)]
+    Q --> M[In-memory index<br/>BM25 + local embeddings]
+    Q --> PG[(Postgres + pgvector<br/>HNSW + full-text)]
+    subgraph Retrieval["retrieval.py / pgstore.py"]
+        M --> R[Reciprocal rank fusion k=60]
+        PG --> R
+    end
+    R --> A[answer.py<br/>citation check per sentence, 3 tries then refuse]
+    R --> W
+    A --> W[web.py: FastAPI + single-page UI]
+    I[intelligence.py<br/>practice, rubric grading, topic counts] --> W
+    G[agent.py<br/>LangGraph router over 4 tools] --> W
+    S[offline.py<br/>sample bank + keyword grader] -. demo mode .-> W
+    A -. optional .-> L[Gemini API]
+    I -. optional .-> L
+```
 
 ## Status and what is verified
 
